@@ -31,6 +31,6 @@ Here are some highlights:
 
     Avoid `config.yaml`
 
-    Remove `parameters.yaml`
+    Deprecate `parameters.yaml` and use `.env` or environment variables instead
 
 - More...
