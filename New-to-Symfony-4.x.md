@@ -5,7 +5,9 @@ Getting Married is developed with Symfony 4.x and this Wiki is going to document
 Install the PHPStorm plugin according to the IDE version
 https://github.com/Haehnchen/idea-php-symfony2-plugin/blob/master/CHANGELOG.md#version-names
 
-This plugin offer integration like type hints on DI container like below. Hard-coded `$doctrineRegistry` type hint is no longer necessary and the IDE will resolve and interpret it automatically
+Down the distributable `.jar` file from [PHPStorm Plugin Page](https://plugins.jetbrains.com/plugin/7219-symfony-plugin)
+
+This plugin offers integration like type hints on DI container like below. Hard-coded `$doctrineRegistry` type hint is no longer necessary and the IDE will resolve and interpret it automatically
 
 ```diff
 - /** @var \Symfony\Bridge\Doctrine\RegistryInterface $doctrineRegistry */
@@ -21,10 +23,12 @@ Symfony 4.x has a shift of best practice recommendations comparing to its predec
 
 Here are some highlights:
 
-- Do Bundle-less application
+- [Do Bundle-less application](http://fabien.potencier.org/symfony4-monolith-vs-micro.html#bundle-less-applications)
 
     Don't create bundle (i.e., equivalent to Magento module) for application logic. The only reason to create bundle is for reusability
 
-- Use environment variables or `.env` for setting up environment specific configs (e.g., mysql credentials)
+- [Use environment variables](http://fabien.potencier.org/symfony4-best-practices.html#environment-variables) or `.env` for setting up infrastructure specific configs (e.g., mysql credentials)
+
+    Deprecate `config.yaml`
 
 - More...
