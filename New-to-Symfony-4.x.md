@@ -29,6 +29,8 @@ Here are some highlights:
 
 - [Use environment variables](http://fabien.potencier.org/symfony4-best-practices.html#environment-variables) or `.env` for setting up infrastructure specific configs (e.g., mysql credentials)
 
-    Deprecate `config.yaml`
+    Avoid `config.yaml`
+
+    Remove `parameters.yaml`
 
 - More...
