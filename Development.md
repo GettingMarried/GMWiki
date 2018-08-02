@@ -18,11 +18,12 @@ It depends on the PR's nature to apply different forms of tests. We usually targ
 To execute all test suites:
 
 ```bash
-$ .env php vendor/bin/simple-phpunit --coverage-text \
+env $(cat .env | grep -v "#" | xargs) php vendor/bin/simple-phpunit --coverage-text \
     # --testsuite=unit \ # (Optional) Execute only unit test suite
 ```
 
 - `.env` is the environment variables file that include infrastructure specific setups (e.g., mysql credentials)
+- `env $(cat .env | grep -v "#" | xargs)` disassemble the `.env` file and assign its env vars to the `simple-phpunit` command
 - Substitute `--testsuite=unit` with different suites for target scopes (`functional`, `integration`, or `unit`)
 
 **NOTE: This command is all you need if there isn't any db error**
