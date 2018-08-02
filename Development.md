@@ -22,9 +22,8 @@ $ .env php vendor/bin/simple-phpunit --coverage-text \
     # --testsuite=unit \ # (Optional) Execute only unit test suite
 ```
 
-Note: `.env` is the environment variables file that include infrastructure specific setups (e.g., mysql credentials)
-
-Note: Substitute `--testsuite=unit` with different suites for target scopes (`functional`, `integration`, or `unit`)
+- `.env` is the environment variables file that include infrastructure specific setups (e.g., mysql credentials)
+- Substitute `--testsuite=unit` with different suites for target scopes (`functional`, `integration`, or `unit`)
 
 **NOTE: This command is all you need if there isn't any db error**
 
