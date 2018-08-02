@@ -42,10 +42,12 @@ Here are some highlights:
 ```bash
 # (TBC) Set environment variables
 # - need to consult system admin when production environment is ready and find the best way to set them up
+# - for the environment variables list, please see ".env.dist"
 # $ source .env
 
 # Create database
 $ php bin/console doctrine:database:create
+Created database `gettingmarried` for connection named default
 
 # Migrate (aka upgrade)
 $ php bin/console doctrine:migrations:migrate --quiet
