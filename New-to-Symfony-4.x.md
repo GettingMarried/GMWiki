@@ -34,3 +34,19 @@ Here are some highlights:
     Deprecate `parameters.yaml` and use `.env` or environment variables instead
 
 - More...
+
+# Install from scratch
+
+**Important: we don't usually need to start from scratch as we stick with persisted docker image. This information however is useful for setting up production environment.** 
+
+```bash
+# (TBC) Set environment variables
+# - need to consult system admin when production environment is ready and find the best way to set them up
+# $ source .env
+
+# Create database
+$ php bin/console doctrine:database:create
+
+# Migrate (aka upgrade)
+$ php bin/console doctrine:migrations:migrate --quiet
+```
