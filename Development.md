@@ -26,20 +26,22 @@ DATABASE_URL=mysql://root:@127.0.0.1:23322/gettingmarried \
 
 Note: Substitute `--testsuite=unit` with different suites for target scopes (`functional`, `integration`, or `unit`)
 
+**NOTE: This command is all you need if there isn't any db error**
+
 ### Set up perquisites for integration / functional test
 
 For database state specific tests, a test db is required to run the test suites.
 
 An error may occur if an expected state is not met:
 
-```
+```diff
 $ php vendor/bin/simple-phpunit
-SQLSTATE[3D000]: Invalid catalog name: 1046 No database selected
++ SQLSTATE[3D000]: Invalid catalog name: 1046 No database selected
 ```
 
-Follow below sections to set it up.
+When this happens, follow below sections to set it up.
 
-#### Make sure `test-db` is up
+#### Make sure test-db is up
 
 A `test-db` is created and exposed with port `23322` locally for Integration Test and Functional Test, which rely on database state. It is a vanilla `ampco/mysql` with no data.
 
@@ -51,7 +53,7 @@ redis                                                 gettingmarried_redis_1    
 ampco/mysql                                           gettingmarried_db_1              0.0.0.0:23321->3306/tcp
 ```
 
-If you want to recreate the `test-db`, run:
+If you want to recreate the test-db (for example, for a clean test), run:
 
 ```bash
 $ docker stop gettingmarried_test-db_1; docker rm gettingmarried_test-db_1
@@ -59,28 +61,28 @@ $ docker-compose --file=./docker-compose.yml up -d
 Creating gettingmarried_test-db_1 ... done
 ```
 
-#### Install database to `test-db`
+#### Set up test-db
 
-```bash
-$ DATABASE_URL=mysql://root:@127.0.0.1:23322/gettingmarried \
-    php bin/console doctrine:database:create
-Created database `gettingmarried` for connection named default
-```
+1. Install database to test-db
 
-#### Install tables to `test-db`
+    ```bash
+    $ DATABASE_URL=mysql://root:@127.0.0.1:23322/gettingmarried \
+        php bin/console doctrine:database:create
+    Created database `gettingmarried` for connection named default
+    ```
 
-```bash
-$ DATABASE_URL=mysql://root:@127.0.0.1:23322/gettingmarried \
-    php bin/console doctrine:migrations:migrate \
-    --quiet
-```
+2. Install tables to test-db
 
-#### Load fixtures to `test-db` (i.e., test data for running test cases)
+    ```bash
+    $ DATABASE_URL=mysql://root:@127.0.0.1:23322/gettingmarried \
+        php bin/console doctrine:migrations:migrate --quiet
+    ```
 
-Integration / functional tests usually depend on database state. Load the fixtures into database to offer the required test data:
+3. Load fixtures to test-db (i.e., test data for running test cases)
 
-```bash
-DATABASE_URL=mysql://root:@127.0.0.1:23322/gettingmarried \
-    php bin/console doctrine:fixtures:load \
-    --quiet
-```
+    ```bash
+    DATABASE_URL=mysql://root:@127.0.0.1:23322/gettingmarried \
+        php bin/console doctrine:fixtures:load --quiet
+    ```
+
+    NOTE: Integration / functional tests usually depend on database state. This loads the fixtures into database to offer the required test data.
