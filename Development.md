@@ -18,7 +18,8 @@ It depends on the PR's nature to apply different forms of tests. We usually targ
 To execute all test suites:
 
 ```bash
-env $(cat .env | grep -v "#" | xargs) php vendor/bin/simple-phpunit --coverage-text \
+env $(cat .env | grep -v "#" | xargs) php vendor/bin/simple-phpunit \
+    --coverage-text \
     # --testsuite=unit \ # (Optional) Execute only unit test suite
 ```
 
