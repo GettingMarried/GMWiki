@@ -35,6 +35,22 @@ Here are some highlights:
 
 - More...
 
+# Upgrade
+
+Symfony offers a clear backward compatibility matrix and promise [backward compatibility](http://symfony.com/doc/current/contributing/code/bc.html) for **minor release**.
+
+Upgrading from `4.1.x` to `4.x` is effortless.
+
+```bash
+$ composer update "symfony/*" --with-all-dependencies
+```
+
+See: https://symfony.com/doc/current/setup/upgrade_minor.html
+
+Symfony 4 is supported until `11/2023`. Until its end of life, we are not expecting any major effort on upgrading it.
+
+https://github.com/AmpersandHQ/gettingmarried/issues/1
+
 # Install from scratch
 
 **Important: we don't usually need to start from scratch as we stick with persisted docker image. This information however is useful for setting up production environment.** 
