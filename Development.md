@@ -30,11 +30,17 @@ env $(cat .env | grep -v "#" | xargs) php vendor/bin/simple-phpunit --coverage-t
 
 ### Load test fixtures (i.e., test data for running test cases)
 
-Integration / functional tests usually depend on database state. A fresh db container does not contain fixtures. Load them into db before we run test:
+You will need to do this if you have:
+- modified `src/DataFixtures`; or
+- reinstalled a fresh instance (e.g., just finished running `make osx-local` or `make osx-docker-services`)
+
+Load test fixtures:
 
 ```bash
-php bin/console doctrine:fixtures:load --quiet
+php bin/console doctrine:fixtures:load --append
 ```
+
+Note: Always use `--append` to append the data fixtures instead of deleting all data from the database first
 
 If you want to recreate the db (for example, for a clean test), run:
 
