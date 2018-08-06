@@ -33,9 +33,32 @@ Here are some highlights:
 
     Deprecate `parameters.yaml` and use `.env` or environment variables instead
 
+- [Use ORM annotation](https://symfony.com/doc/current/best_practices/business-logic.html#doctrine-mapping-information)
+
+    Avoid `doctrine.yaml`, `.xml`, or `.php` which break up ORM metadata from domain Entity
+
 - More...
 
-# Upgrade
+# Generate code (e.g., entity, controller, and more)
+
+Thanks to Symfony 4, many skeleton boiler pate code can be generated.
+
+For example, to generate an `WeddingEvent` entity:
+
+```bash
+$ php bin/console make:entity WeddingEvent
+```
+
+# Upgrade application
+
+After pulled latest changes from remote repo, run migrate command to install database changes:
+
+```bash
+# Migrate (aka upgrade)
+$ php bin/console doctrine:migrations:migrate --quiet
+```
+
+# Upgrade Symfony Core
 
 Symfony offers a clear backward compatibility matrix and promise [backward compatibility](http://symfony.com/doc/current/contributing/code/bc.html) for **minor release**.
 
