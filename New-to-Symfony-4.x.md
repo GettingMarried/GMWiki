@@ -49,6 +49,24 @@ For example, to generate an `WeddingEvent` entity:
 $ php bin/console make:entity WeddingEvent
 ```
 
+Once an entity is updated / created, we need to reflect the changes in the database schema. Generate and execute migrate:
+
+```bash
+# Generate migration script
+$ php bin/console make:migration
+
+           
+  Success! 
+           
+
+ Next: Review the new migration "src/Migrations/Version20180806133408.php"
+ Then: Run the migration with php bin/console doctrine:migrations:migrate
+ See https://symfony.com/doc/current/bundles/DoctrineMigrationsBundle/index.html
+
+# Execute migration scropt
+$ php bin/console doctrine:migrations:migrate
+```
+
 # Upgrade application
 
 After pulled latest changes from remote repo, run migrate command to install database changes:
