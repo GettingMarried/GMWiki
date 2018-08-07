@@ -67,6 +67,15 @@ $ php bin/console make:migration
 $ php bin/console doctrine:migrations:migrate
 ```
 
+Alternative, for a quick and dirty local testing, force the database schema to update:
+
+```bash
+# Force database update regardless of migration script
+$ php bin/console doctrine:schema --force
+```
+
+Note: this is for local testing only. You should always generate migration script and commit to the PR.
+
 # Upgrade application
 
 After pulled latest changes from remote repo, run migrate command to install database changes:
