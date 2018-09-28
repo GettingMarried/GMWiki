@@ -1,6 +1,7 @@
 Continue Integration is the heart of this Gettingmarried development process. To enable it, this Wiki documented the necessary steps and methodologies needed to execute by each Developer.
 
 - TDD
+- BDD
 - CI
 - PR
 
@@ -62,3 +63,43 @@ or simply:
 ```bash
 $ make osx-docker-services
 ```
+
+## BDD (Behaviour Driven Development)
+
+BDD share the same idea of TDD, having the test build and failed before we actually implement it. The main difference between them is, BDD writes test with **text**, in domain specific language, which aims at understandable by stakeholders.
+
+However, the reason we do BDD isn't because of domain specific language. Instead, is to increase the maintainability of API test cases as they usually have multiple states to confirm or execute before test cases can execute. We use [Behat](http://behat.org/) to test API.
+
+### Define steps
+
+A test case is called feature and it looks like this:
+
+```feature
+Given there is a "Sith Lord Lightsaber", which costs £5
+When there is a "Sith Lord Lightsaber", which costs £10
+Then there is an 'Anakin Lightsaber', which costs £10
+And there is a Lightsaber, which costs £2
+But there is a Lightsaber, which costs £25
+```
+
+This is a step:
+
+```feature
+Given there is a "Sith Lord Lightsaber", which costs £5
+```
+
+How does Behat know what to do when it sees a step?
+
+```php
+/**
+ * @Given there is a(n) :arg1, which costs £:arg2
+ */
+public function thereIsAWhichCostsPs($arg1, $arg2)
+{
+    throw new PendingException();
+}
+```
+
+For details, see [defining-steps](http://behat.org/en/latest/quick_start.html#defining-steps)
+
+Api-platform has implemented api [related steps](https://api-platform.com/docs/distribution/testing/#testing-and-specifying-the-api) out of the box and we only need to maintain the minimal customisation (if any)
