@@ -6,6 +6,8 @@ Swagger: https://gettingmarried.ampdev.co/api/
 
 # Authentication
 
+Demo: http://recordit.co/Pnb2D1CPUv
+
 ```bash
 $ curl -X POST -H "Content-Type: application/json" \
   https://gettingmarried-local.ampdev.co/api/login_check \
