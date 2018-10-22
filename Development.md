@@ -5,6 +5,8 @@ Continue Integration is the heart of this Gettingmarried development process. To
 - CI
 - PR
 
+If you are [New to Symfony](https://github.com/AmpersandHQ/gettingmarried/wiki/New-to-Symfony-4.x), have a look at the wiki, it documents the basic and best practices for developers.
+
 ## TDD (test driven development)
 
 Each PR MUST be covered by automated tests in any forms of:
