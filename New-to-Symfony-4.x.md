@@ -76,6 +76,61 @@ $ php bin/console doctrine:schema --force
 
 Note: this is for local testing only. You should always generate migration script and commit to the PR.
 
+## Generate migration script
+
+Migration script is purely a script to run during migration. It supports DI and that means you can load entity
+or other dependencies in in the process and actually run against them.
+
+Entity migration script generation is done by `doctrine/doctrine-migrations-bundle` bundle, it compares
+the differences between:
+- current database schema; and
+- expected database schema (which resolves from entity mapping metadata)
+
+It is developer friendly however error prone because of the inconsistent state of our local db instance during
+development.
+
+When we implement an entity, we usually will:
+- make the entity;
+- force the database schema to update;
+- test the entity with integration test; and 
+- update the entity, and repeat
+
+This process will cause our database going out of sync however is the most suitable development process so far.
+
+To overcome the issue and generate reliable database schema, we should reset our db before generation:
+
+```bash
+# Stop and remove local db container
+$ docker stop gettingmarried_db_1; docker rm gettingmarried_db_1
+
+# Create db container from db image
+$ docker-compose --file=./docker-compose.yml up -d
+```
+
+Or, if you don't mind taking a little longer, simply:
+
+```
+$ make osx-docker-services
+```
+
+Once the db is back online (which usually takes only seconds), run:
+
+```
+# Migrate with existing migration scripts
+$ php bin/console doctrine:migrations:migrate --quiet
+
+# Generate migration script
+$ php bin/console make:migration
+
+           
+  Success! 
+           
+
+ Next: Review the new migration "src/Migrations/Version20180806133408.php"
+ Then: Run the migration with php bin/console doctrine:migrations:migrate
+ See https://symfony.com/doc/current/bundles/DoctrineMigrationsBundle/index.html
+```
+
 # Upgrade application
 
 After pulled latest changes from remote repo, run migrate command to install database changes:
