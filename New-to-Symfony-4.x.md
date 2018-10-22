@@ -43,6 +43,8 @@ Here are some highlights:
 
 Thanks to Symfony 4, many skeleton boiler pate code can be generated.
 
+## Overview code generation
+
 For example, to generate an `WeddingEvent` entity:
 
 ```bash
