@@ -25,7 +25,11 @@ Here are some highlights:
 
 - [Do Bundle-less application](http://fabien.potencier.org/symfony4-monolith-vs-micro.html#bundle-less-applications)
 
-    Don't create bundle (i.e., equivalent to Magento module) for application logic. The only reason to create bundle is for reusability
+    Don't create bundle (i.e., equivalent to Magento module) for application logic. ~The only reason to create bundle is for reusability~
+
+    **HERE IS A CATCH, WE DO CREATE BUNDLES FOR SOME REASONS**
+
+    https://github.com/AmpersandHQ/gettingmarried/tree/development/bundles
 
 - [Use environment variables](http://fabien.potencier.org/symfony4-best-practices.html#environment-variables) or `.env` for setting up infrastructure specific configs (e.g., mysql credentials)
 
@@ -38,6 +42,8 @@ Here are some highlights:
     Avoid `doctrine.yaml`, `.xml`, or `.php` which break up ORM metadata from domain Entity
 
 - More...
+
+Don't be afraid to challenge the existing best practice. It changes and evolves. If we can justify the use case of a amendment, we should go for it and more importantly, document **the reasons** here so we know why we made this decision and we can adapt easily in the future when situation change.
 
 # Generate code (e.g., entity, controller, and more)
 
