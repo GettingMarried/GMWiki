@@ -44,7 +44,7 @@ You MUST append Jira ticket number to pull request title
 Example:
 
 ```
-Implement date picker and integrate on storybook GETMARRIED-129
+Implement date picker and integrate on storybook (GETMARRIED-129)
 ```
 
 You MUST include a Jira ticket link (e.g., [GETMARRIED-129](https://ampersand.atlassian.net/browse/GETMARRIED-129)) on pull request
