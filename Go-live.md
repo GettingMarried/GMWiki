@@ -1,6 +1,14 @@
 This page documents necessary steps required in order to go live, including production environment setup and configurations needed from the client however still not obtained or too sensitive to persist in codebase.
 
-# Environment
+# Functional setup (Involve: Client)
+
+## Initialise default package
+
+[GETMARRIED-136](https://ampersand.atlassian.net/browse/GETMARRIED-136)
+
+Package is made default by UserAdmin and the system do not initialise this data. Before we go live, during UAT / Soft Launch phase, we are expected to make sure a default package is in place.
+
+# Environment (Involve: DevOps / SystemAdmin)
 
 ## Environment variables
 
