@@ -1,6 +1,6 @@
 Related Tickets:
-[GETMARRIED-396](https://ampersand.atlassian.net/browse/GETMARRIED-396)
-[GETMARRIED-128](https://ampersand.atlassian.net/browse/GETMARRIED-128)
+- [GETMARRIED-396](https://ampersand.atlassian.net/browse/GETMARRIED-396)
+- [GETMARRIED-128](https://ampersand.atlassian.net/browse/GETMARRIED-128)
 
 
 ```jsonc
