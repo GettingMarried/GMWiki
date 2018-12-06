@@ -10,9 +10,22 @@ If you are [New to Symfony](https://github.com/AmpersandHQ/gettingmarried/wiki/N
 ## TDD (test driven development)
 
 Each PR MUST be covered by automated tests in any forms of:
+
 - Unit Test (located in: `tests/Unit`)
-- [Integration Test](https://stackoverflow.com/a/3670767) (located in: `tests/Integration`)
+
+    This is test which DO NOT need symfony kernel to run
+
+- Integration Test (located in: `tests/Integration`)
+
+    This is test which DO need symfony kernel to run; however DO NOT run on http request level
+
 - Functional Test (located in: `tests/Functional`)
+
+    This is test which DO need symfony kernel to run; and DO run on http request level
+
+- Feature Test (aka: Behaviour Test / driven by Behat / located in `tests/features`)
+
+    This is functional test but implemented with Behat for clear test scenarios and reusability
 
 It depends on the PR's nature to apply different forms of tests. We usually target Unit Test / Integration Test.
 
