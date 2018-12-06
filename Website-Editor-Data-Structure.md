@@ -351,6 +351,8 @@ Related Tickets:
     // to get the correct stylesheet and the colours to generate
     // for the theme proper.
     "view": {
+        // (BE - Subscription Constraint) Offer it only if the subscription is active; if the subscription of
+        // of this theme is expired, fall back to the FREE subscription's default theme
         "theme": {
             "themeName": "contemporary",
             "colours": [
@@ -365,6 +367,8 @@ Related Tickets:
             // Site navigation is based on the blocks above; the order they're in
             // depends on where they appear in the navigation as well
             "navigation": [
+                // (BE - Subscription Constraint) Offer it only if the subscription is active; Do not render it
+                // if the subscription is inactive;
                 {
                     "title": "About Us",
                     "path": "about-us"
@@ -378,6 +382,8 @@ Related Tickets:
         // This is just the guest version of the blocks list above; this filters out the
         // blocks that are not active (for guest view).
         "blocks": [
+            // (BE - Subscription Constraint) Offer it only if the subscription is active; Do not render it
+            // if the subscription is inactive;
             {
                 "type": "hero-banner",
                 "path": null,
