@@ -6,6 +6,8 @@ This wiki documents the GM release process. Please keep it up to date and update
 
 **Cutoff time:** By the end of the day of the 2nd-week's Thursday, all tickets in the sprint must be either merged and passed on dev, or moved to the next sprint
 
+**version:** `major.minor.hotfix` (`major` is expected to always be 0 until we go live; each sprint release will increase `minor`)
+
 ## Process
 
 ### Preparation
