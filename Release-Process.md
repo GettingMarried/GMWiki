@@ -19,9 +19,9 @@ After the cutoff time (i.e., the 2nd-week's Friday morning):
 
 There is a chance that a ticket may be merged to dev and then failed and need rework. If the ticket cannot be fixed before the cutoff time, we have three options:
 
-A. delay the release until the issue is fixed by the developer; or worked around it
-B. go on the release and tolerate the issue
-C. pull the changes out of the codebase (this usually create a fair amount of overhead in the process)
+- A. delay the release until the issue is fixed by the developer; or worked around it
+- B. go on the release and tolerate the issue
+- C. pull the changes out of the codebase (this usually create a fair amount of overhead in the process)
 
 Martha, Lissie and Torrey will be responsible to discuss and decide which option to go for according to the situation
 
