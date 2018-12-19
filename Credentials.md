@@ -20,3 +20,12 @@ Local / development
 
 Production
 - TO-BE-CONFIRMED
+
+## Booking.com API and Documentation
+
+Development
+HTTP Basic Auth
+Username: `accounts@gettingmarried.co.uk`
+Password: `Tonypandy2015`
+
+Endpoint: `https://distribution-xml.booking.com/2.3/json/{resource}`
