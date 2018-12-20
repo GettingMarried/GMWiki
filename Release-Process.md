@@ -4,7 +4,7 @@ This wiki documents the GM release process. Please keep it up to date and update
 
 **Sprint size:** 2 weeks (Start from December 2018 and go on, each sprint is 2 week large)
 
-**Cutoff time:** By the end of the day of the 2nd-week's Thursday, all tickets in the sprint must be either merged and passed on dev, or moved to the next sprint
+**Cutoff time:** By the end of the sprint, all tickets in that sprint must be either merged and passed on dev, or moved to the next sprint
 
 **version:** `major.minor.hotfix` (`major` is expected to always be 0 until we go live; each sprint release will increase `minor`)
 
@@ -12,7 +12,7 @@ This wiki documents the GM release process. Please keep it up to date and update
 
 ### Preparation
 
-After the cutoff time (i.e., the 2nd-week's Friday morning):
+After the cutoff time (i.e., the next day after the sprint finishes (aka: the Monday of the first week of every sprint)):
 
 - the releaser (i.e., Torrey) will merge the development branch to the qa branch, tag as a release of the sprint, and deploy to QA; and
 - the PM (i.e. Martha) will tag the tickets
