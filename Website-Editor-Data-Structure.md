@@ -387,7 +387,7 @@ Related Tickets:
             {
                 "type": "hero-banner",
                 "path": null,
-                "text": "We're getting married!",
+                "title": "We're getting married!",
                 "weddingDate": "21st June 2019",
                 "showRsvp": true,
                 "order": 1
