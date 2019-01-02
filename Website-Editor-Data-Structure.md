@@ -190,36 +190,36 @@ Related Tickets:
                             },
                         ],
                     },
-                ]
-            },
-            // this should only be enabled if the customer has purchased
-            // a specific upgrade
-            // (BE - Subscription Constraint) Show it only if the subscription is active
-            "custom": {
-                // Base theme of this "custom" theme
-                // This custom theme inherits from "contemporary"; missing configs are falled back to
-                // the base theme
-                // (BE - Feature Constraint) "baseTheme" value must exists in the list above
-                "baseTheme": "contemporary",
-                // When it is "selected", it is the one used to render guest view
-                // (BE - Feature Constraint) There must be one and only one (across all) set to selected=true
-                "selected": true,
-                // Belong to a package called "creative"
-                // When "creative" is subscribed, this becomes usable; otherwise, greyed out
-                "subscription": "creavitve",
-                "palettes": [
-                    {
-                        "name": "palette-1",
-                        // This "selected" can be "true", only if its parenet.selected is also "true"
-                        // (BE - Feature Constraint) There must be one and only one (across all) set to selected=true
-                        // (BE - Feature Constraint) This "selected" can be "true", only if its parenet.selected is also "true"
-                        "selected": true,
-                        "colours": [
-                            "#ABA",
-                            "#BAB"
-                        ]
-                    }
-                ]
+                ],
+                // this should only be enabled if the customer has purchased
+                // a specific upgrade
+                // (BE - Subscription Constraint) Show it only if the subscription is active
+                "custom": {
+                    // Base theme of this "custom" theme
+                    // This custom theme inherits from "contemporary"; missing configs are falled back to
+                    // the base theme
+                    // (BE - Feature Constraint) "baseTheme" value must exists in the list above
+                    "baseTheme": "contemporary",
+                    // When it is "selected", it is the one used to render guest view
+                    // (BE - Feature Constraint) There must be one and only one (across all) set to selected=true
+                    "selected": true,
+                    // Belong to a package called "creative"
+                    // When "creative" is subscribed, this becomes usable; otherwise, greyed out
+                    "subscription": "creavitve",
+                    "palettes": [
+                        {
+                            "name": "palette-1",
+                            // This "selected" can be "true", only if its parenet.selected is also "true"
+                            // (BE - Feature Constraint) There must be one and only one (across all) set to selected=true
+                            // (BE - Feature Constraint) This "selected" can be "true", only if its parenet.selected is also "true"
+                            "selected": true,
+                            "colours": [
+                                "#ABA",
+                                "#BAB"
+                            ]
+                        }
+                    ]
+                },
             },
         },
         // These blocks are the ones currently active on the couple view - some of them are also
