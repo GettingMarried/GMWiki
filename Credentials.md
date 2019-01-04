@@ -13,13 +13,17 @@ You must have a valid user setup and active into their backend. To create an adm
 
 ## Auth0
 
-Local / development
+Local / development / qa
 - https://manage.auth0.com
 - Username: `development@ampersandit.co.uk`
 - Password: `B&IRFno*^gB*)N7v*Pyv`
 
-Production
-- TO-BE-CONFIRMED
+## Stripe
+
+Local / development / qa
+- https://dashboard.stripe.com/login
+- Username: `tt@amp.co`
+- Password: `*zT9$Hl^5VC^2C6c`
 
 ## Booking.com API and Documentation
 
