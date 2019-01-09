@@ -4,10 +4,11 @@ This wiki temporarily keeps the data structure design for inbox. When the ticket
 // /guestManagement/inbox/?page=2&filter=rsvp
 
 {
-    "unreadMessage": 2,
-    "totalMessage": 103,
+    "unreadMessages": 2,
+    "totalMessages": 103,
     "filter": [
         {
+            // (BE Constraint) Populate it according to the
             "title": "RSVP",
             "selected": false,
             "location": {
@@ -42,12 +43,16 @@ This wiki temporarily keeps the data structure design for inbox. When the ticket
             "read": true,
             "sender": "Joe Bloggs",
             "senderEmail": "jb@amp.co",
-            "content": "Hi Emily & Archie,<br /><br />You received a message...",
+            "receiver": "Emily & Archie",
+            "content": "Hi guys, just a quick question about the nearest accommodation to the wedding venue...",
         },
         // (Note) Rsvp
         {
-            //... Exactly the same as contact form, except for the type really for now
+            // (Note) Exactly the same as contact form, except for the type and type specific data (e.g., additionalGuests)
             "type": "rsvp",
+            // (Note) Type specific data
+            // (Note) For FE to populate the text "Their RSVP details have been added to your guest list along with their additional [$additionalGuests] guest(s)."
+            "additionalGuests": 1,
         },
     ],
     "pagination": {
