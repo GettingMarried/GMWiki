@@ -107,7 +107,7 @@ const Guest = {
             "attending": true,
         }
     ],
-    tastyFood: [ 
+    tastyFood: [ // name tbd
         {
             "event": "event/f8aa9d9f-7cff-497c-bba0-d836fd1fe733",
             code: "ceremony-starter",
