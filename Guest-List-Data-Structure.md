@@ -62,9 +62,31 @@
     ],
     // FE constraint - If this list is empty AND the user has created an event, 
     // render a message prompting them to add users
-    "guests": [
+    "rsvps": [
         // multiple instances of Guest would come in here
         // TBD - still on discussion
+        {
+            "date": 1547648282,
+            "guests": [
+                {
+                    // Guest information here - singular
+                }
+            ]
+        },
+        {
+            "date": 1547648282,
+            "guests": [
+                {
+                    // Guest information here - multiple
+                },
+                {
+                    // Guest information here - multiple
+                },
+                {
+                    // Guest information here - multiple
+                },
+            ]
+        },
     ],
     "guestsDownload": "https://gettingmarried.co.uk/20190101-your-list.xls"
 }
