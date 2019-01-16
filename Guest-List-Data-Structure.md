@@ -91,3 +91,178 @@
     "guestsDownload": "https://gettingmarried.co.uk/20190101-your-list.xls"
 }
 ```
+
+### Guest - TBD
+```jsonc
+const Guest = {
+    // FE constraint - this can be used for removing or updating guests
+    id: 'c5850948-8169-4e7f-b347-6eadf261a7d8',
+    name: 'name',
+    email: 'e@mail.co',
+    telephone: '000000',
+    // approach 1 - TBD
+    attendance: [
+        {
+            "event": "event/f8aa9d9f-7cff-497c-bba0-d836fd1fe733",
+            "attending": true,
+        }
+    ],
+    tastyFood: [ 
+        {
+            "event": "event/f8aa9d9f-7cff-497c-bba0-d836fd1fe733",
+            code: "ceremony-starter",
+            choice: "meal_2",
+        },
+        {
+            "event": "event/f8aa9d9f-7cff-497c-bba0-d836fd1fe733",
+            code: "reception-main",
+            choice: "meal_4",
+        },
+        {
+            "event": "event/f8aa9d9f-7cff-497c-bba0-d836fd1fe733",
+            code: "reception-dessert",
+            choice: null,
+        }
+    ],
+    // approach 2 - TBD
+    attendance: [
+        "reception",
+        "ceremony",
+    ],
+    selectedMeals: [
+        {
+            event: "ceremony",
+            code: "starter",
+            meal: "meal_2",
+        },
+        {
+            event: "reception",
+            code: "main",
+            meal: "meal_4",
+        },
+        {
+            event: "reception",
+            code: "dessert",
+            meal: null,
+        }
+    ],
+    events: [
+        {
+            code: "reception",
+            title: "Reception",
+            mealList: [
+                {
+                    title: "Starter",
+                    code: "starter",
+                    meals: [
+                        {
+                            code: "meal_1",
+                            title: "Meal 1",
+                            description: "Lorem"
+                        },
+                        {
+                            code: "meal_2",
+                            title: "Meal 2",
+                            description: "Ipsum",
+                        },
+                    ]
+                },
+                {
+                    title: "Main",
+                    code: "main",
+                    meals: [
+                        {
+                            code: "meal_3",
+                            title: "Meal 3",
+                            description: "Dolor"
+                        },
+                        {
+                            code: "meal_4",
+                            title: "Meal 4",
+                            description: "Sit",
+                        },
+                    ]
+                },
+                {
+                    title: "Dessert",
+                    code: "dessert",
+                    meals: [
+                        {
+                            code: "meal_6",
+                            title: "Meal 6",
+                            description: "Amet",
+                        },
+                    ]
+                }
+            ],
+        },
+    ],
+    customFields: [
+        {
+            type: 'contact_form',
+            value: 'blah',
+        }
+    ],
+}
+```
+
+### Event - TBD
+```jsonc
+const Event = {
+    id: "f8aa9d9f-7cff-497c-bba0-d836fd1fe733",
+    code: 'ceremony',
+    title: 'Ceremony',
+    description: 'Ceremony description',
+    location: [
+        'Address',
+        'Line',
+        'M1 1AB',
+    ],
+    date: 1547648282,
+    courses: [
+        {
+            title: "Starter",
+            code: "ceremony-starter",
+            choices: [
+                {
+                    code: "meal_1",
+                    title: "Meal 1",
+                    description: "Lorem"
+                },
+                {
+                    code: "meal_2",
+                    title: "Meal 2",
+                    description: "Ipsum"
+                },
+            ]
+        },
+        {
+            title: "Main",
+            code: "ceremony-main",
+            choices: [
+                {
+                    code: "meal_3",
+                    title: "Meal 3",
+                    description: "Dolor"
+                },
+                {
+                    code: "meal_4",
+                    title: "Meal 4",
+                    description: "Sit"
+                },
+            ]
+        },
+        {
+            title: "Dessert",
+            code: "ceremony-dessert",
+            choices: [
+                {
+                    code: "meal_6",
+                    title: "Meal 6",
+                    description: "Amet"
+                },
+            ]
+        }
+    ]
+}
+```
