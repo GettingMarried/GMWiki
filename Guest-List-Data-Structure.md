@@ -64,6 +64,7 @@
     // render a message prompting them to add users
     "guests": [
         // multiple instances of Guest would come in here
+        // TBD - still on discussion
     ],
     "guestsDownload": "https://gettingmarried.co.uk/20190101-your-list.xls"
 }
