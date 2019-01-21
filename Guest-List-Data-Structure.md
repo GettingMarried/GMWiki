@@ -8,7 +8,7 @@
     // FE constraint - If this array is empty,
     //                 the user doesn't have an event created;
     //                 prompt them to create an event
-    "attendingSummary": [
+    "attendingSummaries": [
         {
             "label": "Ceremony",
             "total": 8,
