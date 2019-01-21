@@ -1,11 +1,13 @@
 ```jsonc
 {
-    // BE constraint - check the website editor information to see if the RSVP block is visible to guests
+    // BE constraint - check the website editor information
+    //                 to see if the RSVP block is visible to guests
     "isRsvpActive": true,
     "guestsAttending": 11,
     "guestsNotAttending": 1,
-    // FE constraint - If this array is empty, the user doesn't have an event created;
-    // prompt them to create an event
+    // FE constraint - If this array is empty,
+    //                 the user doesn't have an event created;
+    //                 prompt them to create an event
     "attendingSummary": [
         {
             "label": "Ceremony",
@@ -17,11 +19,21 @@
         },
     ],
     "filter": [
+        // BE constraint - "All guests" is hard-coded
         {
-            // These will populate from the BE from the list of events; the only two constants will be the
-            // 'Attending' and 'Not Attending' at the bottom but even they will be sent over from the BE.
+            "title": "All guests",
+            "selected": true,
+            "location": {
+                "filter": null,
+                "page": 2,
+            },
+        },
+        // BE constraint - These (ceremony, reception, etc) will be populated dynamically
+        //                 from the list of events;
+        {
             "title": "Ceremony",
             "selected": false,
+            // BE constraint - the "location" offers FE metadata to generate a filter link
             "location": {
                 "filter": "ceremony",
                 "page": 2,
@@ -43,19 +55,12 @@
                 "page": 2,
             },
         },
+        // BE constraint - "Not attending" is hard-coded
         {
             "title": "Not attending",
             "selected": false,
             "location": {
                 "filter": "not_attending",
-                "page": 2,
-            },
-        },
-        {
-            "title": "All guests",
-            "selected": true,
-            "location": {
-                "filter": null,
                 "page": 2,
             },
         },
@@ -75,20 +80,23 @@
                     "telephone": '01612365504',
                     "attendances": [
                         // (Note) An "attendance" indicates the guest's attendance metadata.
-                        //        For example, on "Ceremony" event, the guest is attending and required meals.
+                        //        For example (in below), on "Ceremony" event,
+                        //        the guest is attending and required meals.
                         {
                             "event": {
                                 // i.e., Ceremony
                                 "id": "f8aa9d9f-7cff-497c-bba0-d836fd1fe733",
                                 "title": 'Ceremony',
-                                // BE constraint - To simplify, remove the unnecessary attributes (e.g., "meals") in the "event" object
+                                // BE constraint - To simplify, remove the unnecessary attributes
+                                //                 (e.g., "meals") in the "event" object
                             },
                             "attending": true,
                             "requiredMeals": true,
                         }
                     ],
                     "selectedMeals": [
-                        // (Note) A "selectedMeal" indicates the guest's meal preferences on the Event level.
+                        // (Note) A "selectedMeal" indicates the guest's meal preferences
+                        //        on the Event level.
                         //        For example (in below), on the "Ceremony" event:
                         //        - for "Starter" meal, the guest prefers a "Vegan" course; and
                         //        - for "Main" meal, the guest prefers a "Non Vegetarian" course.
@@ -97,10 +105,12 @@
                                 // i.e., Ceremony
                                 "id": "f8aa9d9f-7cff-497c-bba0-d836fd1fe733",
                                 "title": 'Ceremony',
-                                // BE constraint - To simplify, remove the unnecessary attributes (e.g., "meals") in the "event" object
+                                // BE constraint - To simplify, remove the unnecessary attributes
+                                //                 (e.g., "meals") in the "event" object
                             },
                             "selectedCourses": [
-                                // (Note) A "selectedCourse" indicates the guest's course preference on the Meal level.
+                                // (Note) A "selectedCourse" indicates the guest's course preference
+                                //        on the Meal level.
                                 {
                                     "meal": {
                                         // i.e., Starter
@@ -125,7 +135,8 @@
                                     "course": {
                                         // i.e., Vegan
                                         "id": "bfaa4a3c-9b51-41e9-8b38-036bb5a29735"
-                                        // BE constraint - To simplify, remove the unnecessary attributes (e.g., "title") in the "course" object
+                                        // BE constraint - To simplify, remove the unnecessary attributes
+                                        //                 (e.g., "title") in the "course" object
                                     }
                                 },
                                 {
