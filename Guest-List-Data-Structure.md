@@ -83,40 +83,21 @@
                         //        For example (in below), on "Ceremony" event,
                         //        the guest is attending and required meals.
                         {
+                            // BE constraint - Event is populated and retrieved from database.
+                            //                 No modification is needed
                             "event": {
                                 // i.e., Ceremony
                                 "id": "f8aa9d9f-7cff-497c-bba0-d836fd1fe733",
                                 "title": 'Ceremony',
-                                // BE constraint - To simplify, remove the unnecessary attributes
-                                //                 (e.g., "meals") in the "event" object
-                            },
-                            "attending": true,
-                            "requiredMeals": true,
-                        }
-                    ],
-                    "selectedMeals": [
-                        // (Note) A "selectedMeal" indicates the guest's meal preferences
-                        //        on the Event level.
-                        //        For example (in below), on the "Ceremony" event:
-                        //        - for "Starter" meal, the guest prefers a "Vegan" course; and
-                        //        - for "Main" meal, the guest prefers a "Non Vegetarian" course.
-                        {
-                            "event": {
-                                // i.e., Ceremony
-                                "id": "f8aa9d9f-7cff-497c-bba0-d836fd1fe733",
-                                "title": 'Ceremony',
-                                // BE constraint - To simplify, remove the unnecessary attributes
-                                //                 (e.g., "meals") in the "event" object
-                            },
-                            "selectedCourses": [
-                                // (Note) A "selectedCourse" indicates the guest's course preference
-                                //        on the Meal level.
-                                {
-                                    "meal": {
+                                "meals": [
+                                    // (Note) Meal is an Value Object and for now they are hard-coded
+                                    //        as "Starter", "Main", and "Dessert". (out of scope -
+                                    //        allowed to extend in the future)
+                                    {
                                         // i.e., Starter
-                                        "id": "db835b62-2064-43e0-8cbf-ab061bbcc8c1",
                                         "title": "Starter",
-                                        "courses": [
+                                        // (Note) (Out of Scope) choices are configurable by Couple
+                                        "choices": [
                                             {
                                                 "id": "c79f4586-4b8d-44ea-a643-6c48dfc01b3b",
                                                 "title": "Non Vegetarian",
@@ -131,35 +112,37 @@
                                             },
                                         ]
                                     },
+                                    {
+                                        "title": "Main",
+                                        // ...
+                                    },
+                                    {
+                                        "title": "Dessert",
+                                        // ...
+                                    },
+                                ],
+                            },
+                            "attending": true,
+                            "requiredMeals": true,
+                            // (Note) A "selectedMeal" indicates the guest's meal preferences
+                            //        for the Event level.
+                            //        For example (in below), in the "Ceremony" event:
+                            //        - for "Starter" meal, the guest prefers a "Vegan" course; and
+                            //        - for "Main" meal, the guest prefers a "Non Vegetarian" course.
+                            "selectedMeals": [
+                                // (Note) A "selectedCourse" indicates the guest's course preference
+                                //        on the Meal level.
+                                {
+                                    "course": "Starter",
                                     // BE constraint - if no "course" is selected, default to the first one.
-                                    "course": {
-                                        // i.e., Vegan
-                                        "id": "bfaa4a3c-9b51-41e9-8b38-036bb5a29735"
-                                        // BE constraint - To simplify, remove the unnecessary attributes
-                                        //                 (e.g., "title") in the "course" object
-                                    }
+                                    "choice": "Vegan",
                                 },
                                 {
-                                    "meal": {
-                                        // i.e., Main
-                                        "id": "863157e0-b098-439d-94f5-8502143ae7a7",
-                                        "title": "Main",
-                                        "courses": [
-                                            {
-                                                "id": "d507d771-348b-46be-a2d5-201d20872775",
-                                                "title": "Non Vegetarian",
-                                            },
-                                            // ...
-                                        ]
-                                    },
-                                    "course": {
-                                        // i.e., Non Vegetarian
-                                        "id": "d507d771-348b-46be-a2d5-201d20872775"
-                                    }
+                                    "course": "Main",
+                                    "choice": "Non Vegetarian",
                                 },
                             ],
                         },
-                        // ...
                     ],
                 },
                 //...
