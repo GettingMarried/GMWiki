@@ -45,3 +45,14 @@ With a symptoms like above, you should be able to tidy the composer.lock by runn
 rm -rf vendor
 composer install --prefer-source --optimize-autoloader
 ```
+
+## PDO Database Connection Error: Connection Refused
+If this command happens at any point during the `make build-local` step, chances are that the MySQL server has not started correctly. Check your currently running Docker machines with `docker ps --all | grep getting`; you should see something similar to the outputs below:
+```bash
+19d27bd91a83        ampco/gettingmarried:varnish    "/bin/sh -c 'docker-…"   4 hours ago         Up 4 hours                  0.0.0.0:8102->80/tcpgettingmarried_varnish_1
+1050e8068add        ampco/gettingmarried:db         "docker-entrypoint.s…"   4 hours ago         Up 4 hours                  0.0.0.0:23321->3306/tcpgettingmarried_db_1
+9c9215a7754e        redis                           "docker-entrypoint.s…"   4 hours ago         Up 4 hours                  0.0.0.0:6387->6379/tcpgettingmarried_redis_1
+```
+If any of these are **not** marked as 'Up <x time>' on your setup (e.g. if `gettingmarried:db` is marked as `Exited 24 seconds ago`), copy the hash (the very first part of each line) and check it's log files with `docker logs <hash>`.
+This may output a Docker error of `No space left on device`. If so, open up `Docker > Preferences > Disk` and update the disk space that is provided to Docker.
+**PLEASE NOTE** this WILL require Docker to restart, so any instances you have running **will** be shut down; if you have any projects that you need to keep running, maybe don't follow these steps until you know that you're able to run them without any negative repercussions.
