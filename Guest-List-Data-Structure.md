@@ -98,18 +98,9 @@
                                         "title": "Starter",
                                         // (Note) (Out of Scope) choices are configurable by Couple
                                         "choices": [
-                                            {
-                                                "id": "c79f4586-4b8d-44ea-a643-6c48dfc01b3b",
-                                                "title": "Non Vegetarian",
-                                            },
-                                            {
-                                                "id": "1fec0eb1-930a-4321-879c-b2cfef5140f2",
-                                                "title": "Vegetarian",
-                                            },
-                                            {
-                                                "id": "bfaa4a3c-9b51-41e9-8b38-036bb5a29735",
-                                                "title": "Vegan",
-                                            },
+                                            "Non Vegetarian",
+                                            "Vegetarian",
+                                            "Vegan",
                                         ]
                                     },
                                     {
