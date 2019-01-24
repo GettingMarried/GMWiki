@@ -76,6 +76,10 @@
                     // FE constraint - this can be used for removing or updating guests
                     "id": 'c5850948-8169-4e7f-b347-6eadf261a7d8',
                     "name": 'Jake Critchlow',
+                    // BE constraint - When RSVP is filled in, for the guest (who is not the respondent)
+                    //                 the email and the telephone, will be populated from respondent.
+                    //                 As a result, when the respondent is removed, the contact info of
+                    //                 the remaining guests will still exist
                     "email": 'jc@amp.co',
                     "telephone": '01612365504',
                     "attendances": [
