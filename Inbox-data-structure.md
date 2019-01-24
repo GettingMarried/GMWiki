@@ -8,28 +8,29 @@ This wiki temporarily keeps the data structure design for inbox. When the ticket
     "totalMessages": 103,
     "filter": [
         {
-            // (BE Constraint) Populate it according to the
+            // (BE Constraint) Populate it according to the supplied parameters
             "title": "RSVP",
-            "selected": false,
+            "selected": true,
             "location": {
                 "filter": "rsvp",
                 "page": 2,
             },
         },
         {
+            // (Note) Location's page number will reset when we select a new filter
             "title": "Contact Form",
             "selected": false,
             "location": {
                 "filter": "contact-form",
-                "page": 2,
+                "page": 1,
             },
         },
         {
             "title": "Showing All",
-            "selected": true,
+            "selected": false,
             "location": {
                 "filter": null,
-                "page": 2,
+                "page": 1,
             },
         },
     ],
@@ -56,6 +57,7 @@ This wiki temporarily keeps the data structure design for inbox. When the ticket
         },
     ],
     "pagination": {
+        // (Note) prevPage and nextPage can be null if pagination is not possible
         "prevPage": {
             "title": "Previous Page",
             "location": {
