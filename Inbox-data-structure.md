@@ -57,9 +57,9 @@ This wiki temporarily keeps the data structure design for inbox. When the ticket
         },
     ],
     "pagination": {
-        // (Note) prevPage and nextPage can be null if pagination is not possible
         "prevPage": {
             "title": "Previous Page",
+            // (Note) Location can be null if pagination is not possible (e.g. prevPage.location on page 1)
             "location": {
                 "filter": "rsvp",
                 "page": 1,
