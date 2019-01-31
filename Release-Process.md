@@ -109,15 +109,18 @@ Once the deployment is done, you should smoke test the qa website (same steps as
 If the deployment requires new database fixtures, this can be done after the deployment by following these steps:
 - Re-deploy the database container from Cloud 66 (to get a new and empty copy)
 - SSH into the web container by running:
-```
+
+```bash
 cx ssh -s 'gettingmarried' -e development master
 docker exec -u www-data -it $(docker ps -q -f name=web_web) bash
-```bash
+```
+
 - Make sure the database is empty by running `mysql -uroot -hdb gettingmarried` and `show tables;`
 - Run `make auth` to insure environment variables are set
 - Run `composer install -o` to install dev dependencies
 - Run `rm -rf var/cache/` and `php bin/console redis:flushall` to flush the caches
 - Run the following command to re-install the data:
+
 ```bash
 php bin/console doctrine:migrations:migrate --quiet
 php bin/console doctrine:phpcr:repository:init
