@@ -1,9 +1,9 @@
-Proposed data structure (NOT CONFIRMED YET)
+## Proposed data structure (NOT CONFIRMED YET)
 
 ```jsonc
 {
     "users": [
-        // Mulitiple users are allowed and they are not necessary participants (e.g., wedding planner)
+        // (Note) Mulitiple users are allowed and they are not necessary participants (e.g., wedding planner)
         {
             // Identity provider id - unique identfier in Auth0
             "id": "auth0|g67sd876sd6dfg8sg6",
@@ -18,8 +18,8 @@ Proposed data structure (NOT CONFIRMED YET)
         {
             "givenName": "Benjamin",
             "familyName": "Aimes",
-            "preferred": "Ben",
-            //text
+            "preferredName": "Ben",
+            // Question: What is a profile?
             "profile": "aaa aaa",
             //S3 url
             "image": "https://"
@@ -27,7 +27,7 @@ Proposed data structure (NOT CONFIRMED YET)
         {
             "givenName": "Jennifer",
             "familyName": "Grubb",
-            "preferred": "Jen",
+            "preferredName": "Jen",
             //text
             "profile": "aaa aaa",
             //s3 url
@@ -44,7 +44,7 @@ Proposed data structure (NOT CONFIRMED YET)
         }
     },
     "showCountdown": true,
-    // Texts are becoming "custom-text-block" in the new wedding website
+    // Texts potentially become "custom-text-block" in the new wedding website
     "texts": [
         {
             // site_intro_text
@@ -96,12 +96,11 @@ Proposed data structure (NOT CONFIRMED YET)
                 "postCode": "BL1 2AB",
                 //ISO 3166-1 alpha-2
                 "country": "GB",
-                "position": null
+                "coords": {
+                    "lat": 53.578474,
+                    "lng": -2.429915
+                }
             },
-            "coords": {
-                "lat": 53.578474,
-                "lng": -2.429915
-            }
             "description": "We have chosen the most beautiful location in Bolton - Rivington Hall Barn, situated perfectly to watch the sunset. We have the privilege of saying our vows on the spa roof terrace overlooking the sea with all of you beautiful people up there with us. Rivington Hall Barn is the perfect blend of style and substance, we chose it knowing it was perfect for us."
         },
     ]
