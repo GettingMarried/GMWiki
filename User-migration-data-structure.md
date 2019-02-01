@@ -1,6 +1,6 @@
 Proposed data structure (NOT CONFIRMED YET)
 
-```json
+```jsonc
 {
     "users": [
         // Mulitiple users are allowed and they are not necessary participants (e.g., wedding planner)
