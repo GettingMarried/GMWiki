@@ -19,6 +19,9 @@ The old GM is expected to send a user migration request to force / upon user mig
 
 ```jsonc
 // Content-Type: application/json
+// (IMPORTANT) Migration object (below) is on "wedding" account level, that is, multiple users who below to the same
+// wedding account, must be migrated at once. Spliting up migration of the same wedding account for different users
+// will result in creating multiple wedding account.
 {
     "users": [
         // (Note) Mulitiple users are allowed and they are not necessary participants (e.g., wedding planner)
