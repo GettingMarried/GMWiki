@@ -19,6 +19,7 @@ The old GM is expected to send a user migration request to force / upon user mig
 
 ```jsonc
 // Content-Type: application/json
+//
 // (IMPORTANT) Migration object (below) is on "wedding" account level, that is, multiple users who below to the same
 // wedding account, must be migrated at once. Spliting up migration of the same wedding account for different users
 // will result in creating multiple wedding account.
@@ -26,7 +27,7 @@ The old GM is expected to send a user migration request to force / upon user mig
     "users": [
         // (Note) Mulitiple users are allowed and they are not necessary participants (e.g., wedding planner)
         {
-            // Identity provider id - unique identfier in Auth0
+            // (Note) Identity provider id - unique identfier in Auth0
             "id": "auth0|g67sd876sd6dfg8sg6",
             // Login email
             "email": "ben.aimes@htomail.com",
@@ -60,10 +61,8 @@ The old GM is expected to send a user migration request to force / upon user mig
     "websiteSetting": {
         // (Note) Metadata to specify if the wedding website can be indexed by search engine
         "indexable": false,
-        "domain": {
-            "sub": "bennyandjenny",
-            "primary": "ourdayinhistory.co.uk"
-        }
+        "subDomain": "bennyandjenny",
+        "primaryDomain": "ourdayinhistory.co.uk"
     },
     // (Note) If yes, "countdown clock" is set to published
     "showCountdown": true,
