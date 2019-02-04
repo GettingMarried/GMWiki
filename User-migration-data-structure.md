@@ -18,55 +18,58 @@
         {
             "givenName": "Benjamin",
             "familyName": "Aimes",
+            // (Note) Name shows in the "about us" block
             "preferredName": "Ben",
-            // Question: What is a profile?
-            "profile": "aaa aaa",
-            //S3 url
-            "image": "https://"
+            // (Note) Description to put into "about us" block
+            "profile": "Ben loves nothing more than cosy nights in the sofa ...",
+            // (Note) Image to be presisted in the new GM and used in the "about us" block
+            "image": "https://ui-avatars.com/api/?name=Benjamin+Aimes&rounded=true&size=300&color=ffffff&background=3d5afe"
         },
         {
             "givenName": "Jennifer",
             "familyName": "Grubb",
             "preferredName": "Jen",
-            //text
-            "profile": "aaa aaa",
-            //s3 url
-            "image": "https://"
+            "profile": "Jen loves travelling ...",
+            "image": "https://ui-avatars.com/api/?name=Jennifer+Grubb&rounded=true&size=300&color=000000&background=ce93d8"
         }
     ],
-    // Unix timestamp (For example: 0 = UTC 1970-01-01)
-    "weddingDate": 1570752000,
-    "websiteSettings": {
-        "indexableSeo": false,
+    // (Note) Datetime uses in the "countdown clock" block
+    // (Note) Unix timestamp in precision down to seconds (For example: 0 = UTC 1970-01-01 00:00:00; 55815 = UTC 1970-01-01 15:30:15)
+    "weddingDatetime": 1570752000,
+    "websiteSetting": {
+        // (Note) Metadata to specify if the wedding website can be indexed by search engine
+        "indexable": false,
         "domain": {
             "sub": "bennyandjenny",
             "primary": "ourdayinhistory.co.uk"
         }
     },
+    // (Note) If yes, "countdown clock" is set to published
     "showCountdown": true,
-    // Texts potentially become "custom-text-block" in the new wedding website
-    "texts": [
-        {
-            // site_intro_text
-            "title": "Introduction",
-            "content": "We\u0026#39;re getting married! ..."
-        },
-        {
-            // how_we_met_text
-            "title": "How we met",
-            "content": "As most of you know ..."
-        },
-        {
-            // proposal_text
-            "title": "Proposal text",
-            "content": "It was a lovely ..."
-        }
-    ],
+    // (Note) Texts *potentially* become "custom-text-block" in the new wedding website; as we only migrate free package features and we don't know if it includes below blocks, they are out of scope for now.
+    // "texts": [
+    //     {
+    //         // site_intro_text
+    //         "title": "Introduction",
+    //         "content": "We\u0026#39;re getting married! ..."
+    //     },
+    //     {
+    //         // how_we_met_text
+    //         "title": "How we met",
+    //         "content": "As most of you know ..."
+    //     },
+    //     {
+    //         // proposal_text
+    //         "title": "Proposal text",
+    //         "content": "It was a lovely ..."
+    //     }
+    // ],
     "events": [
+        // (Note) Data used for creating a "ceremony" block
         {
-            "title": "Ceremony",
-            // Unix timestamp (For example: 0 = UTC 1970-01-01)
-            "weddingDate": 1570806000,
+            "type": "ceremony",
+            // (Note) Unix timestamp in precision down to seconds (For example: 0 = UTC 1970-01-01 00:00:00; 55815 = UTC 1970-01-01 15:30:15)
+            "datetime": 1570806000,
             "location": {
                 "name": "Rivington Hall Barn",
                 "addressLines": [
@@ -83,10 +86,11 @@
             },
             "description": "We have chosen the most beautiful location in Bolton - Rivington Hall Barn, situated perfectly to watch the sunset. We have the privilege of saying our vows on the spa roof terrace overlooking the sea with all of you beautiful people up there with us. Rivington Hall Barn is the perfect blend of style and substance, we chose it knowing it was perfect for us.",
         },
+        // (Note) Data used for creating a "reception" block
         {
-            "title": "Reception",
-            // Unix timestamp (For example: 0 = UTC 1970-01-01)
-            "weddingDate": 1570806000,
+            "type": "reception",
+            // (Note) Unix timestamp in precision down to seconds (For example: 0 = UTC 1970-01-01 00:00:00; 55815 = UTC 1970-01-01 15:30:15)
+            "datetime": 1570806000,
             "location": {
                 "name": "Rivington Hall Barn",
                 "addressLines": [
