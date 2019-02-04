@@ -2,7 +2,7 @@
 
 endpoint: /api/userMigration
 
-The old GM is expected to send a user migration request to force / upon user migration. The data structure is defined in below format. The new GM should then create an user and migrate the data, mainly for wedding website (defined in https://github.com/AmpersandHQ/gettingmarried/pull/176/)
+The old GM is expected to send a user migration request to force / upon user migration. The data structure is defined in below format. The new GM should then create an user and migrate the data, mainly for wedding website, defined in: https://github.com/AmpersandHQ/gettingmarried/pull/176/
 
 ### Migrate multiple objects at once
 
