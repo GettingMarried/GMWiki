@@ -7,7 +7,7 @@ The old GM is expected to send a user migration request to force / upon user mig
 ### Migrate multiple objects at once
 
 ```jsonc
-// Accept: application/ld+json
+// Content-Type: application/ld+json
 [
     { /** user migration object 1 */ },
     { /** user migration object 2 */ },
@@ -18,7 +18,7 @@ The old GM is expected to send a user migration request to force / upon user mig
 ### Migrate single object
 
 ```jsonc
-// Accept: application/json
+// Content-Type: application/json
 {
     "users": [
         // (Note) Mulitiple users are allowed and they are not necessary participants (e.g., wedding planner)
