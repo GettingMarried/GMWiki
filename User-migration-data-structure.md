@@ -29,32 +29,34 @@ The old GM is expected to send a user migration request to force / upon user mig
         {
             // (Note) Identity provider id - unique identfier in Auth0
             "id": "auth0|g67sd876sd6dfg8sg6",
-            // Login email
+            // (Note) Marketing email
             "email": "ben.aimes@htomail.com",
+            // (Note) Marketing and syncing to mailchimp based on opt in state
             "marketingOptIn": {
                 "email": true
             }
         }
     ],
-    "participants": [
-        {
-            "givenName": "Benjamin",
-            "familyName": "Aimes",
-            // (Note) Name shows in the "about us" block
-            "preferredName": "Ben",
-            // (Note) Description to put into "about us" block
-            "profile": "Ben loves nothing more than cosy nights in the sofa ...",
-            // (Note) Image to be presisted in the new GM and used in the "about us" block
-            "image": "https://ui-avatars.com/api/?name=Benjamin+Aimes&rounded=true&size=300&color=ffffff&background=3d5afe"
-        },
-        {
-            "givenName": "Jennifer",
-            "familyName": "Grubb",
-            "preferredName": "Jen",
-            "profile": "Jen loves travelling ...",
-            "image": "https://ui-avatars.com/api/?name=Jennifer+Grubb&rounded=true&size=300&color=000000&background=ce93d8"
-        }
-    ],
+    // (Note) Participants' givenName, familyName, and preferredName are meatadata used for personalising content
+    // They will be persisted in the new GM for further usage. "profile" and "image" however populate against
+    // "about us" block only.
+    "participant1": {
+        "givenName": "Benjamin",
+        "familyName": "Aimes",
+        // (Note) Name shows in the "about us" block
+        "preferredName": "Ben",
+        // (Note) Description to put into "about us" block
+        "profile": "Ben loves nothing more than cosy nights in the sofa ...",
+        // (Note) Image to be presisted in the new GM and used in the "about us" block
+        "image": "https://ui-avatars.com/api/?name=Benjamin+Aimes&rounded=true&size=300&color=ffffff&background=3d5afe"
+    },
+    "participant2": {
+        "givenName": "Jennifer",
+        "familyName": "Grubb",
+        "preferredName": "Jen",
+        "profile": "Jen loves travelling ...",
+        "image": "https://ui-avatars.com/api/?name=Jennifer+Grubb&rounded=true&size=300&color=000000&background=ce93d8"
+    },
     // (Note) Datetime uses in the "countdown clock" block
     // (Note) Unix timestamp in precision down to seconds (For example: 0 = UTC 1970-01-01 00:00:00; 55815 = UTC 1970-01-01 15:30:15)
     "weddingDatetime": 1570752000,
