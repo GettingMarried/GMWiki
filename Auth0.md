@@ -16,7 +16,7 @@ Public APIs in GM applications can be protected from unauthorised use by securin
 For securing publicly available APIs which are designed only for internal use (FE React App talks to our BE) we can use the same flow to get an Access Token for the FE app to use which identifies the app as the user but does *not* identify the logged in user of the app. We can provide the JWT style access token to the FE as part of the initialised state and have the app store the token for calls to the backend API(s).
 
 Alternatively to have an access token which identifies the logged in user it is necessary to request the required scopes for the audience (API identifier). This could cause a slightly disjointed experience as we would send the user to the `authorize` when they have already logged in and is not easily achieved with the Auth0 PHP SDK as "login" is assumed to be only used for the audience of the `userinfo` endpoint which allows for use that endpoint but doesn't give access to any other application.
-The correct flow to use is here: https://auth0.com/docs/flows/guides/regular-web-app-login-flow/call-api-using-regular-web-app-login-flow
+The correct flow (Authorization Code Flow) to use is here: https://auth0.com/docs/flows/guides/regular-web-app-login-flow/call-api-using-regular-web-app-login-flow
 The disjointed UX *should* be mitigated by the below statement.
 
 > By default, Auth0 skips user consent for first-party applications, which are applications that are registered under the same Auth0 domain as the API they are calling; however, you can configure your API in Auth0 to require user consent from first-party applications. Third-party applications, which are external applications, require user consent.
