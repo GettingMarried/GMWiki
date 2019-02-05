@@ -25,3 +25,4 @@ Alternatively to have an access token which identifies the logged in user it is 
 
 Universal Login allows us to specify an `audience` for the API and the additional `audience` of the `/userinfo` endpoint is added. The `scopes` can then include the standard OIDC `id_token profile` and the `scopes` required for our APIs e.g. `read:website write:website`.
 A [prototype](https://github.com/AmpersandHQ/gm-auth-proto) of this in operation has been made.
+Ensure the correct format for the returned Access Token is given by following guidelines [here](https://auth0.com/docs/tokens/set-access-token-format).
