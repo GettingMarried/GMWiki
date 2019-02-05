@@ -7,7 +7,7 @@ Prezola have an Enterprise contract for multi tenant AaaS with Auth0. www.auth0.
 ### Application Login
 Primary use case is for identity management and authentication of users both in current GM and the new GM application. Both applications will make use of Universal Login features in Auth0 which provides a hosted sign up and sign in page and incorporates the forgotten password trigger. 
 One Universal Login hosted page is configured per tenant in Auth0.
-Universal Login typically (enforced by the PHP SDK) allows for logging into the primary application as this is the specified Audience and the Scope requested is typically `id_token token`. This allows for an identity and access tokens to be returned from the Universal Login and persisted in the users session as required. The access token returned for the default `audience` and `scopes` is not useful for accessing APIs, see section below for securing APIs and use of Universal Login to do it.
+Universal Login typically (enforced by the PHP SDK) allows for logging into the primary application as this is the specified Audience and the Scope requested is typically `openid profile`. This allows for an identity and access tokens to be returned from the Universal Login and persisted in the users session as required. The access token returned for the default `audience` and `scopes` is not useful for accessing APIs, see section below for securing APIs and use of Universal Login to do it.
 [Universal Login](https://auth0.com/docs/hosted-pages/login)
 
 ### AuthZ for APIs
