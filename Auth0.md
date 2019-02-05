@@ -10,7 +10,9 @@ One Universal Login hosted page is configured per tenant in Auth0.
 Universal Login typically (enforced by the PHP SDK) allows for logging into the primary application as this is the specified Audience and the Scope requested is typically `id_token token`. This allows for an identity and access tokens to be returned from the Universal Login and persisted in the users session as required. The access token
 [Universal Login](https://auth0.com/docs/hosted-pages/login)
 
-### AuthN and AuthZ for APIs
+### AuthZ for APIs
+[Always Secure APIs with Access Token](https://auth0.com/docs/api-auth/why-use-access-tokens-to-secure-apis)
+
 Public APIs in GM applications can be protected from unauthorised use by securing them with Auth0. We have use cases for Machine to Machine applications ([Machine to Machine App](https://auth0.com/docs/applications/machine-to-machine)) which use APIs for communication ([M2M Flow](https://auth0.com/docs/flows/concepts/m2m-flow)).
 
 For securing publicly available APIs which are designed only for internal use (FE React App talks to our BE) we can use the same flow to get an Access Token for the FE app to use which identifies the app as the user but does *not* identify the logged in user of the app. We can provide the JWT style access token to the FE as part of the initialised state and have the app store the token for calls to the backend API(s).
@@ -20,3 +22,6 @@ The correct flow (Authorization Code Flow) to use is here: https://auth0.com/doc
 The disjointed UX *should* be mitigated by the below statement.
 
 > By default, Auth0 skips user consent for first-party applications, which are applications that are registered under the same Auth0 domain as the API they are calling; however, you can configure your API in Auth0 to require user consent from first-party applications. Third-party applications, which are external applications, require user consent.
+
+Universal Login allows us to specify an `audience` for the API and the additional `audience` of the `/userinfo` endpoint is added. The `scopes` can then include the standard OIDC `id_token profile` and the `scopes` required for our APIs e.g. `read:website write:website`.
+A [prototype](https://github.com/AmpersandHQ/gm-auth-proto) of this in operation has been made.
