@@ -25,7 +25,6 @@
             "selected": true,
             "location": {
                 "filter": null,
-                "page": 2,
             },
         },
         // BE constraint - These (ceremony, reception, etc) will be populated dynamically
@@ -36,7 +35,6 @@
             // BE constraint - the "location" offers FE metadata to generate a filter link
             "location": {
                 "filter": "ceremony",
-                "page": 2,
             },
         },
         {
@@ -44,7 +42,6 @@
             "selected": false,
             "location": {
                 "filter": "reception",
-                "page": 2,
             },
         },
         {
@@ -52,7 +49,6 @@
             "selected": false,
             "location": {
                 "filter": "stag_do",
-                "page": 2,
             },
         },
         // BE constraint - "Not attending" is hard-coded
@@ -61,7 +57,6 @@
             "selected": false,
             "location": {
                 "filter": "not_attending",
-                "page": 2,
             },
         },
     ],
