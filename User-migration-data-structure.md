@@ -1,6 +1,6 @@
 ## User migration data structure
 
-Version: 3.0.1
+Version: 3.0.2
 
 Please maintain a version number (above) on update to keep a reference for communication.
 
@@ -90,17 +90,19 @@ For NDJSON specification, please see: https://github.com/ndjson/ndjson-spec#3-fu
     // "texts": [
     //     {
     //         // site_intro_text
-    //         "title": "Introduction",
+    //         // (Note) `type` is reserved for future reference when we confirm
+    //         // their actual use cases in the new wedding website
+    //         "type": "introduction",
     //         "content": "We\u0026#39;re getting married! ..."
     //     },
     //     {
     //         // how_we_met_text
-    //         "title": "How we met",
+    //         "type": "how_we_met",
     //         "content": "As most of you know ..."
     //     },
     //     {
     //         // proposal_text
-    //         "title": "Proposal text",
+    //         "type": "proposal_text",
     //         "content": "It was a lovely ..."
     //     }
     // ],
