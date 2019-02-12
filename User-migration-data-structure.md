@@ -1,6 +1,6 @@
 ## User migration data structure
 
-Version: 3.0.0
+Version: 3.0.1
 
 Please maintain a version number (above) on update to keep a reference for communication.
 
@@ -28,7 +28,7 @@ For NDJSON specification, please see: https://github.com/ndjson/ndjson-spec#3-fu
 // Content-Type: application/json
 //
 // (IMPORTANT) Migration object (below) is on "wedding" account level.
-// That is, multiple users who below to the same wedding account, must be migrated at once.
+// That is, multiple users who belong to the same wedding account, must be migrated at once.
 // Splitting up migration of the same wedding account for different users will result in
 // creating multiple wedding account.
 //
@@ -40,7 +40,7 @@ For NDJSON specification, please see: https://github.com/ndjson/ndjson-spec#3-fu
 // On error, a 4xx http response code will be returned (the exact error codes are to be confirmed)
 {
     "users": [
-        // (Note) Mulitiple users are allowed and they are not necessary participants (e.g., wedding planner)
+        // (Note) Multiple users are allowed and they are not necessarily participants (e.g., wedding planner)
         {
             // (Note) Identity provider id - unique identifier in Auth0
             "id": "auth0|g67sd876sd6dfg8sg6",
@@ -52,7 +52,7 @@ For NDJSON specification, please see: https://github.com/ndjson/ndjson-spec#3-fu
             }
         }
     ],
-    // (Note) Participants' givenName, familyName, and preferredName are meatadata used for personalising content
+    // (Note) Participants' givenName, familyName, and preferredName are metadata used for personalising content
     // They will be persisted in the new GM for further usage. "profile" and "image" however populate against
     // "about us" block only.
     "participant1": {
