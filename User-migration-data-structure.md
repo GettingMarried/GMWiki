@@ -1,5 +1,9 @@
 ## User migration data structure
 
+Version: 2.0.0
+
+Please maintain a version number (above) on update to keep a reference for communication
+
 **Endpoint: /api/userMigration**
 
 The old GM is expected to send a user migration request to force / upon user migration. The data structure is defined in below format. The new GM should then create an user and migrate the data, mainly for wedding website, defined in: https://github.com/AmpersandHQ/gettingmarried/pull/181/
