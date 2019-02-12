@@ -1,8 +1,10 @@
 ## User migration data structure
 
-Version: 2.0.0
+Version: 3.0.0
 
-Please maintain a version number (above) on update to keep a reference for communication
+Please maintain a version number (above) on update to keep a reference for communication.
+
+Reference: https://ampersand.atlassian.net/browse/GETMARRIED-519
 
 **Endpoint: /api/userMigration**
 
@@ -10,13 +12,14 @@ The old GM is expected to send a user migration request to force / upon user mig
 
 ### Migrate multiple objects at once
 
+For NDJSON specification, please see: https://github.com/ndjson/ndjson-spec#3-functional-specification
+
 ```jsonc
-// Content-Type: application/ld+json
-[
-    { /** user migration object 1 */ },
-    { /** user migration object 2 */ },
-    // ...
-]
+// Content-Type: application/x-ndjson
+//
+{ /** user migration object 1 */ }
+{ /** user migration object 2 */ }
+// more objects (delimited by new line char "\n" or "\n\r") ...
 ```
 
 ### Migrate single object
@@ -24,18 +27,26 @@ The old GM is expected to send a user migration request to force / upon user mig
 ```jsonc
 // Content-Type: application/json
 //
-// (IMPORTANT) Migration object (below) is on "wedding" account level, that is, multiple users who below to the same
-// wedding account, must be migrated at once. Spliting up migration of the same wedding account for different users
-// will result in creating multiple wedding account.
+// (IMPORTANT) Migration object (below) is on "wedding" account level.
+// That is, multiple users who below to the same wedding account, must be migrated at once.
+// Splitting up migration of the same wedding account for different users will result in
+// creating multiple wedding account.
+//
+// Http Endpoint: (Tentative - to be confirmed) https://gettingmarried.co.uk/api/userMigration
+//
+// Http Method: POST
+//
+// On success, a 200 http response code will be returned
+// On error, a 4xx http response code will be returned (the exact error codes are to be confirmed)
 {
     "users": [
         // (Note) Mulitiple users are allowed and they are not necessary participants (e.g., wedding planner)
         {
-            // (Note) Identity provider id - unique identfier in Auth0
+            // (Note) Identity provider id - unique identifier in Auth0
             "id": "auth0|g67sd876sd6dfg8sg6",
             // (Note) Marketing email
             "email": "ben.aimes@htomail.com",
-            // (Note) Marketing and syncing to mailchimp based on opt in state
+            // (Note) Marketing and synchronising to mailchimp based on opt-in state
             "marketingOptIn": {
                 "email": true
             }
@@ -51,7 +62,7 @@ The old GM is expected to send a user migration request to force / upon user mig
         "preferredName": "Ben",
         // (Note) Description to put into "about us" block
         "profile": "Ben loves nothing more than cosy nights in the sofa ...",
-        // (Note) Image to be presisted in the new GM and used in the "about us" block
+        // (Note) Image to be persisted in the new GM and used in the "about us" block
         "image": "https://ui-avatars.com/api/?name=Benjamin+Aimes&rounded=true&size=300&color=ffffff&background=3d5afe"
     },
     "participant2": {
@@ -67,12 +78,15 @@ The old GM is expected to send a user migration request to force / upon user mig
     "websiteSetting": {
         // (Note) Metadata to specify if the wedding website can be indexed by search engine
         "indexable": false,
+        // (Note) Metadata to specify custom domain setup
         "subDomain": "bennyandjenny",
         "primaryDomain": "ourdayinhistory.co.uk"
     },
-    // (Note) If yes, "countdown clock" is set to published
+    // (Note) If yes, "countdown clock" is set to published (i.e., visible to guest)
     "showCountdown": true,
-    // (Note) Texts *potentially* become "custom-text-block" in the new wedding website; as we only migrate free package features and we don't know if it includes below blocks, they are out of scope for now.
+    // (Note) (Out of scope) Texts *potentially* become "custom-text-block" in the new wedding website;
+    // as the list of free package features are not decided and it is unsure if it includes below three blocks,
+    // migration of them is currently out of scope.
     // "texts": [
     //     {
     //         // site_intro_text
