@@ -8,6 +8,7 @@ window.GettingMarried.initialState = {
     // BE constraint - Unix timestamp(s) - @to discuss, how does time work
     // BE constraint - payment list comes from Stripe, separate API call
     nextBillingDate: 1550073197,
+    // (Note) Account cancel endpoint is hard-coded on react app endpoint mapping config
 }
 ```
 
