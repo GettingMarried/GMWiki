@@ -7,11 +7,6 @@ window.GettingMarried.initialState.dashboard = {
     "logoutUrl": "https://gettingmarried.co.uk/logout",
     // BE constraint - If site is not live, this URL is not needed.  
     "siteUrl": "http://emily-and-archie.are.gettingmarried.co.uk",
-    // FE constraint - if the `currentPage` is null, don't show the close button - 
-    // if the user has opened the dashboard from a page, make sure it appears
-    // as if it were a modal
-    // Hopefully we don't need this...
-    "currentPage": null,
     // FE constraint - if `siteLive` is false, don't show the 'View Site' button
     "siteLive": false,
     "navigation": [
