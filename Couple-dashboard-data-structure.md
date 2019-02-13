@@ -1,4 +1,4 @@
-```jsonc
+```js
 // site-wide configuration
 // to be used on all pages for logged-in users as it is required for the menu
 window.GettingMarried.dashboardState = {
