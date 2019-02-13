@@ -2,6 +2,7 @@
 // Guest management
 window.GettingMarried.initialState = {
     "coupleName": "Emily & Archie",
+	// Unix timestamp
     "weddingDate": 1234567890,
     "inbox": {
         "unreadMessages": 2,
