@@ -21,19 +21,19 @@ window.GettingMarried.initialState.dashboard = {
         },
         {
             "title": "Website Settings",
-            "url": "https://gettingmarried.co.uk/coupleDashboard/websiteSettings",
+            "url": "https://gettingmarried.co.uk/websiteSettings",
         },
         {
             "title": "Guest Management",
-            "url": "https://gettingmarried.co.uk/coupleDashboard/guestManagement",
+            "url": "https://gettingmarried.co.uk/guestManagement",
         },
         {
             "title": "My Subscription",
-            "url": "https://gettingmarried.co.uk/coupleDashboard/mySubscription",
+            "url": "https://gettingmarried.co.uk/mySubscription",
         },
         {
             "title": "Account Settings",
-            "url": "https://gettingmarried.co.uk/coupleDashboard/accountSettings",
+            "url": "https://gettingmarried.co.uk/accountSettings",
         },
     ],
 };
