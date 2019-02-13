@@ -2,7 +2,11 @@
 // site-wide configuration
 // to be used on all pages for logged-in users as it is required for the menu
 // @to discuss - how will we get this information?
-window.GettingMarried.initialState.dashboard = {
+// `dashboardState` is it's own separate state in the window.GettingMarried object - 
+// `initialState` deals with whatever application we have at the time. 
+// Ideally we could eventually do away with the `window` object and just get what we need from
+// the server. 
+window.GettingMarried.dashboardState = {
     "coupleName": "Emily & Archie",
     "logoutUrl": "https://gettingmarried.co.uk/logout",
     // BE constraint - If site is not live, this URL is not needed.  
