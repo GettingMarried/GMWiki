@@ -14,7 +14,7 @@ window.GettingMarried.initialState = {
 # Billing History
 
 ```jsonc
-// GET: /api/wedding/{id}/invoices
+// GET: /api/wedding/me/invoices
 [
     {
         "date": 1532700031,
