@@ -12,14 +12,29 @@ window.GettingMarried.initialState.dashboard = {
     // as if it were a modal
     // Hopefully we don't need this...
     "currentPage": null,
-    // BE constraint - If `unreadMessages` from the Inbox is greater than 0. 
-    // Don't need to worry about this state being updated until page refresh.
-    "newMessages": true,
-    // BE constraint - If `unreadMessages` from the Inbox is greater than 0, 
-    // AND `unreadMessages` from `RSVP` are greater than 0. 
-    // Don't need to worry about this state being updated until page refresh.
-    "newRsvps": false,
     // FE constraint - if `siteLive` is false, don't show the 'View Site' button
     "siteLive": false,
+    "navigation": [
+        {
+            "title": "Website Editor",
+            "url": "https://gettingmarried.co.uk/wedding/couple",
+        },
+        {
+            "title": "Website Settings",
+            "url": "https://gettingmarried.co.uk/coupleDashboard/websiteSettings",
+        },
+        {
+            "title": "Guest Management",
+            "url": "https://gettingmarried.co.uk/coupleDashboard/guestManagement",
+        },
+        {
+            "title": "My Subscription",
+            "url": "https://gettingmarried.co.uk/coupleDashboard/mySubscription",
+        },
+        {
+            "title": "Account Settings",
+            "url": "https://gettingmarried.co.uk/coupleDashboard/accountSettings",
+        },
+    ],
 };
 ```
