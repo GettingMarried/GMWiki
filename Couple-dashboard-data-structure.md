@@ -1,7 +1,8 @@
 ```js
 // site-wide configuration
 // to be used on all pages for logged-in users as it is required for the menu
-window.GettingMarried.dashboardState = {
+// @to discuss - how will we get this information?
+window.GettingMarried.initialState.dashboard = {
     "coupleName": "Emily & Archie",
     "logoutUrl": "/auth0/logout",
     // BE constraint - If site is not live, this URL is not needed.  
