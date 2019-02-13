@@ -1,3 +1,5 @@
+# Account settings
+
 ```js
 // Account settings
 window.GettingMarried.initialState = {
@@ -7,4 +9,19 @@ window.GettingMarried.initialState = {
     // BE constraint - payment list comes from Stripe, separate API call
     nextBillingDate: 1550073197,
 }
+```
+
+# Billing History
+
+```jsonc
+// GET: /api/wedding/{id}/invoices
+[
+    {
+        "date": 1532700031,
+        "reference": 'in_1CsWUdAN9tOdQHyBEeUptyr7',
+        "currency": "gbp",
+        "amount": 9.99,
+        "paid": true,
+    },
+]
 ```
