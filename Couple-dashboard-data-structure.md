@@ -4,7 +4,7 @@
 // @to discuss - how will we get this information?
 window.GettingMarried.initialState.dashboard = {
     "coupleName": "Emily & Archie",
-    "logoutUrl": "/auth0/logout",
+    "logoutUrl": "https://gettingmarried.co.uk/logout",
     // BE constraint - If site is not live, this URL is not needed.  
     "siteUrl": "http://emily-and-archie.are.gettingmarried.co.uk",
     // FE constraint - if the `currentPage` is null, don't show the close button - 
