@@ -13,7 +13,7 @@ window.GettingMarried.initialState = /** account setting object defined below */
 // Account settings
 {
     // (Note) Password reset endpoint is hard-coded on react app endpoint mapping config
-    //        It is "/api/users/me/resetPassword"
+    //        It is POST to "/api/users/me/resetPassword"
     // (BE constraint) Unix timestamp(s) in the server local timezone
     nextBillingDate: 1550073197,
     // (FE constraint) Show a message confirming that all current Packages Subscribed to are Free
@@ -28,7 +28,7 @@ window.GettingMarried.initialState = /** account setting object defined below */
     hasBillingHistory: true,
     // (Note) Payment history comes from Stripe through separate GM API call
     // (Note) Account cancel endpoint is hard-coded on react app endpoint mapping config
-    //        It is "/api/weddings/me/cancelAccount"
+    //        It is POST to "/api/weddings/me/cancelAccount"
 }
 ```
 
