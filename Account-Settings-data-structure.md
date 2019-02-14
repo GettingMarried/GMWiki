@@ -13,7 +13,7 @@ window.GettingMarried.initialState = /** account setting object defined below */
 // Account settings
 {
     // (Note) Password reset endpoint is hard-coded on react app endpoint mapping config
-    //        It is "/api/users/me/changePassword"
+    //        It is "/api/users/me/resetPassword"
     // (BE constraint) Unix timestamp(s) in the server local timezone
     nextBillingDate: 1550073197,
     // (FE constraint) Show a message confirming that all current Packages Subscribed to are Free
