@@ -4,7 +4,7 @@ Backend to provide the data structure as initial state in window object and fron
 
 ```js
 // "initialState" deals with the main application we have on the specific page
-window.GettingMarried.initialState = /** account setting object defined below */;
+window.GettingMarried.initialState = /** guest management overview object defined below */;
 ```
 
 # Data structure
