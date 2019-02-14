@@ -1,3 +1,12 @@
+# Initial state
+
+Backend to provide the data structure as initial state in window object and front-end to consume it
+
+```js
+// "initialState" deals with the main application we have on the specific page
+window.GettingMarried.initialState = /** account setting object defined below */;
+```
+
 # Account settings
 
 ```jsonc
