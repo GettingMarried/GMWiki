@@ -29,7 +29,7 @@ window.GettingMarried.dashboardState = { /** couple dashboard data structure */ 
     // (Note) null, if site is not live
     "siteUrl": "http://emily-and-archie.are.gettingmarried.co.uk",
     // (FE constraint) if `siteLive` is false, don't show the 'View Site' button
-    // (BE constraint) siteLive is a wedding attribute
+    // (BE constraint) Resolve from "websiteLive" wedding attribute
     "siteLive": false,
     "navigation": [
         {
