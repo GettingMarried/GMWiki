@@ -3,11 +3,11 @@
 ```js
 // Account settings
 window.GettingMarried.initialState = {
-    // FE constraint - these live in different sections, they'll all need to be hard-coded. 
-    "changePasswordLink": "https://gettingmarried.co.uk/account/changePassword",
-    // BE constraint - Unix timestamp(s) - @to discuss, how does time work
-    // BE constraint - payment list comes from Stripe, separate API call
+    // (Note) Password reset endpoint is hard-coded on react app endpoint mapping config
+    //        It is "/api/users/me/changePassword"
+    // (BE constraint) Unix timestamp(s) in the server local timezone
     nextBillingDate: 1550073197,
+    // (Note) Payment history comes from Stripe through separate GM API call
     // (Note) Account cancel endpoint is hard-coded on react app endpoint mapping config
 }
 ```
@@ -15,7 +15,7 @@ window.GettingMarried.initialState = {
 # Billing History
 
 ```jsonc
-// GET: /api/wedding/me/invoices
+// GET: /api/weddings/me/invoices
 [
     {
         "date": 1532700031,
