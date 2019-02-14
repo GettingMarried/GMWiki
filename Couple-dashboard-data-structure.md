@@ -7,10 +7,10 @@ Backend to provide the data structure as initial state in window object and fron
 // It is used on all pages for logged-in users as it is required for the menu.
 // 
 // (Note) the object should be "null" if the user is not logged in
-window.GettingMarried.dashboardState = { /** couple dashboard data structure */ };
+window.GettingMarried.dashboardState = /** couple dashboard data structure */;
 
 // // "initialState" deals with the main application we have on the specific page
-// window.GettingMarried.initialState = { /** main application data structure, e.g, website editor */ };
+// window.GettingMarried.initialState = /** main application data structure, e.g, website editor */;
 
 ```
 
