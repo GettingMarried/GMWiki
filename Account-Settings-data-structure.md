@@ -1,8 +1,8 @@
 # Account settings
 
-```js
+```jsonc
 // Account settings
-window.GettingMarried.initialState = {
+{
     // (Note) Password reset endpoint is hard-coded on react app endpoint mapping config
     //        It is "/api/users/me/changePassword"
     // (BE constraint) Unix timestamp(s) in the server local timezone
