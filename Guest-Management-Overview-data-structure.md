@@ -19,11 +19,14 @@ window.GettingMarried.initialState = /** guest management overview object define
     // (BE constraint) Resolve from weddingDate attribute
     "weddingDate": 1234567890,
     "inbox": {
-        // 
+        // (Note) Number of unread messages
+        // (BE constraint) Create repository to query the number of unread messages
         "unreadMessages": 2,
         "link": "https://gettingmarried.co.uk/guestManagement/inbox"
     },
     "guestList": {
+        // (Note) Number of guests that attend to at least one event
+        // (BE constraint) Create repository to query the number of guests attending
         "guestsAttending": 11,
         "link": "https://gettingmarried.co.uk/guestManagement/guestList"
     },
