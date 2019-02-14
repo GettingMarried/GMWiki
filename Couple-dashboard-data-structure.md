@@ -32,6 +32,9 @@ window.GettingMarried.dashboardState = { /** couple dashboard data structure */ 
     // (FE constraint) if `siteLive` is false, don't show the 'View Site' button
     // (BE constraint) Resolve from "websiteLive" wedding attribute
     "siteLive": false,
+    // (FE constraint) When the user click/tap on the state of the website, redirect to this url
+    // (BE constraint) Resolve from "website settings" route
+    "siteLiveUrl": "https://gettingmarried.co.uk/websiteSettings",
     "navigation": [
         {
             "title": "Website Editor",
