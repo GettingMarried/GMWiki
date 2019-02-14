@@ -1,3 +1,13 @@
+# Initial state
+
+Backend to provide the data structure as initial state in window object and front-end to consume it
+
+```js
+// "initialState" deals with the main application we have on the specific page
+window.GettingMarried.initialState = /** website settings object defined below */;
+```
+
+# Data structure
 ```jsonc
 {
     // (FE constraint) When toggle to true, send a PUT request to "/api/wedding/me/putWebsiteLive"
