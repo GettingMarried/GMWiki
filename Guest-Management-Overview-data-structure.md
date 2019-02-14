@@ -11,6 +11,9 @@ window.GettingMarried.initialState = /** guest management overview object define
 ```jsonc
 // Guest management
 {
+    // (Note) participant1_preferred_name and participant2_preferred_name joint together by an "&"
+    // (BE Constraint) On registration, the preferred names are resolved from first names and persisted
+    // (See Couple Dashboard data structure)
     "coupleName": "Emily & Archie",
 	// Unix timestamp
     "weddingDate": 1234567890,
