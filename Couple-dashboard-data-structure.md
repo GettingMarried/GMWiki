@@ -6,6 +6,7 @@ Backend to provide the data structure as initial state in window object and fron
 // (Note) "dashboardState" object is a site-wide configuration
 // It is used on all pages for logged-in users as it is required for the menu.
 // 
+// (Note) the object should be "null" if the user is not logged in
 window.GettingMarried.dashboardState = { /** couple dashboard data structure */ };
 
 // // "initialState" deals with the main application we have on the specific page
@@ -18,7 +19,7 @@ window.GettingMarried.dashboardState = { /** couple dashboard data structure */ 
 # Data structure
 
 ```jsonc
-// (Note) Offered if the user is logged in
+// (Note) "null" or "undefined" if the user is not logged in
 {
     // (Note) participant1_preferred_name and participant2_preferred_name joint together by an "&"
     // (BE Constraint) On registration, the preferred names are resolved from first names and persisted
