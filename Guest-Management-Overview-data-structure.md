@@ -15,9 +15,11 @@ window.GettingMarried.initialState = /** guest management overview object define
     // (BE Constraint) On registration, the preferred names are resolved from first names and persisted
     // (See Couple Dashboard data structure)
     "coupleName": "Emily & Archie",
-	// Unix timestamp
+    // (Note) Unix timestamp in the server timezone
+    // (BE constraint) Resolve from weddingDate attribute
     "weddingDate": 1234567890,
     "inbox": {
+        // 
         "unreadMessages": 2,
         "link": "https://gettingmarried.co.uk/guestManagement/inbox"
     },
