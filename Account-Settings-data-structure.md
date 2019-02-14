@@ -21,7 +21,7 @@ window.GettingMarried.initialState = /** account setting object defined below */
     //                 As package's prices are no longer editable after once it has ever be subscribable,
     //                 it is safe to resolve by looking at the subscribed package current prices
     isBillable: true,
-    // (Note) It is possible that isBillable=false and hasBillingHistory=true
+    // (Note) It is possible that at the same time isBillable=false and hasBillingHistory=true
     //        where the user might have paid for billable package before and later on downgraded to free package
     // (FE constraint) Show "billing history" link if it is true
     // (BE constraint) "false" if stripe has never issued invoices
