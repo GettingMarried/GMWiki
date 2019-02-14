@@ -9,6 +9,8 @@ window.GettingMarried.initialState = {
     nextBillingDate: 1550073197,
     // (FE constraint) Show a message confirming that all current Packages Subscribed to are Free
     // (BE constraint) "true" if there is any billable package subscribed in the account
+    //                 As package's prices are no longer editable after once it has ever be subscribable,
+    //                 it is safe to resolve by looking at the subscribed package current prices
     isBillable: true,
     // (Note) It is possible that isBillable=false and hasBillingHistory=true
     //        where the user might have paid for billable package before and later on downgraded to free package
