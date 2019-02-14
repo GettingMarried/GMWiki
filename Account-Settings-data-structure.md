@@ -7,6 +7,14 @@ window.GettingMarried.initialState = {
     //        It is "/api/users/me/changePassword"
     // (BE constraint) Unix timestamp(s) in the server local timezone
     nextBillingDate: 1550073197,
+    // (FE constraint) Show a message confirming that all current Packages Subscribed to are Free
+    // (BE constraint) "true" if there is any billable package subscribed in the account
+    isBillable: true,
+    // (Note) It is possible that isBillable=false and hasBillingHistory=true
+    //        where the user might have paid for billable package before and later on downgraded to free package
+    // (FE constraint) Show "billing history" link if it is true
+    // (BE constraint) "false" if stripe has never issued invoices
+    hasBillingHistory: true,
     // (Note) Payment history comes from Stripe through separate GM API call
     // (Note) Account cancel endpoint is hard-coded on react app endpoint mapping config
 }
