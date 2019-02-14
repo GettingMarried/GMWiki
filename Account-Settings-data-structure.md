@@ -28,6 +28,7 @@ window.GettingMarried.initialState = /** account setting object defined below */
     hasBillingHistory: true,
     // (Note) Payment history comes from Stripe through separate GM API call
     // (Note) Account cancel endpoint is hard-coded on react app endpoint mapping config
+    //        It is "/api/weddings/me/cancelAccount"
 }
 ```
 
