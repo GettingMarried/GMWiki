@@ -1,5 +1,5 @@
 ```jsonc
-// (Note) 
+// POST /api/weddings/88f06170-3454-11e9-b210-d663bd873d93/submitRsvp
 {
     "guests": [
         {
