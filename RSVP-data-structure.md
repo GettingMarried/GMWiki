@@ -29,7 +29,8 @@ And the endpoint has created guests, attendances and message according to the RS
       //                   It should be same to all guests in the same request
       // (Note) - to allow guests grouped in guest list
       "creationId": null,
-      "name": "Jake Critchlow",
+      "giveName": "Jake",
+      "surname": "Critchlow",
       "email": "jc@amp.co",
       "telephone": "01612365504",
       "attendances": [
@@ -53,6 +54,7 @@ And the endpoint has created guests, attendances and message according to the RS
     { /** guest 2 */ },
     // ...
   ],
+  // (Note) "message" is null if the there's no message filled in by the guest
   "message": {
     // (FE constraint) - Leave "id" null
     // (BE constraint) - It is automatically populated by doctrine on persist
