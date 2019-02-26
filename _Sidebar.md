@@ -1,7 +1,7 @@
 ### Data Structures
 
 * [Account Settings](https://github.com/AmpersandHQ/gettingmarried/wiki/Account-Settings-data-structure)
-* [Couple Dashboard](https://github.com/AmpersandHQ/gettingmarried/wiki/Couple-dashboard-data-structure)
+* [Couple Dashboard](https://github.com/AmpersandHQ/gettingmarried/wiki/Couple-dashboard-data-structure)  **deprecated**
 * [Guest List](https://github.com/AmpersandHQ/gettingmarried/wiki/Guest-List-Data-Structure) **deprecated**
 * [Guest Management Overview](https://github.com/AmpersandHQ/gettingmarried/wiki/Guest-Management-Overview-data-structure)
 * [Inbox](https://github.com/AmpersandHQ/gettingmarried/wiki/Inbox-data-structure) **deprecated**
