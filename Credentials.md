@@ -11,6 +11,16 @@ Authentication uses Auth0 service for both Admin view and couple view.
  
 You must have a valid user setup and active into their backend. To create an admin account, log in to Auth0 portal  with corresponding Auth0 credentials and create a new user at [Users](https://manage.auth0.com/#/users). 
 
+## GM data fixture user
+
+Local / development
+- https://gettingmarried.ampdev.co/login
+- Username: `tt+gm+dev+user@amp.co`
+- Password: `gettingmarried123!`
+- Guest view: https://gettingmarried.ampdev.co/wedding/guest/000000ff-0000-1000-8000-000000000000
+
+This user is pre-populated with data fixture to enable QA
+
 ## Auth0
 
 Local / development / qa
