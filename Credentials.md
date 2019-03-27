@@ -20,9 +20,18 @@ Local / development
 - Guest view: https://gettingmarried.ampdev.co/wedding/guest/000000ff-0000-1000-8000-000000000000
 
 There are also 3 spare accounts to facilitate development and QA. (Password is the same)
-- `tt+gm+dev+user+2@amp.co` / https://gettingmarried.ampdev.co/wedding/guest/00000100-0000-1000-8000-000000000000
-- `tt+gm+dev+user+3@amp.co` / https://gettingmarried.ampdev.co/wedding/guest/00000101-0000-1000-8000-000000000000
-- `tt+gm+dev+user+4@amp.co` / https://gettingmarried.ampdev.co/wedding/guest/00000102-0000-1000-8000-000000000000
+
+- `tt+gm+dev+user+2@amp.co`
+
+    https://gettingmarried.ampdev.co/wedding/guest/00000100-0000-1000-8000-000000000000
+
+- `tt+gm+dev+user+3@amp.co`
+
+    https://gettingmarried.ampdev.co/wedding/guest/00000101-0000-1000-8000-000000000000
+
+- `tt+gm+dev+user+4@amp.co`
+
+    https://gettingmarried.ampdev.co/wedding/guest/00000102-0000-1000-8000-000000000000
 
 This user is pre-populated with data fixture to enable QA
 
