@@ -125,7 +125,7 @@ docker exec -u www-data -it $(docker ps -q -f name=web_web) bash
 php bin/console doctrine:migrations:migrate --quiet
 php bin/console doctrine:phpcr:repository:init
 php bin/console doctrine:phpcr:node:dump
-php bin/console doctrine:phpcr:fixtures:load
+php bin/console doctrine:phpcr:fixtures:load -n
 APP_ENV=dev php bin/console doctrine:fixtures:load --append #dev mode is required while running this command
 ```
 - Finally, re-deploy the web container via Cloud 66 to remove the dev dependancies
