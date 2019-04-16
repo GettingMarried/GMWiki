@@ -29,6 +29,8 @@ window.GettingMarried.initialState = /** account setting object defined below */
     // (Note) Payment history comes from Stripe through separate GM API call
     // (Note) Account cancel endpoint is hard-coded on react app endpoint mapping config
     //        It is POST to "/api/weddings/me/cancelAccount"
+    allowedToResetPassword: true
+    // (Note) This has been added to for FE to be able to hide and show reset password link
 }
 ```
 
