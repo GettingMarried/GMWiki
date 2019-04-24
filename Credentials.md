@@ -57,3 +57,15 @@ Development
 - Password: `Tonypandy2015`
 
 Endpoint: `https://distribution-xml.booking.com/2.3/json/{resource}`
+
+## Google Tag Manager
+
+Environment: Local / Dev / QA
+
+- Container ID: `GTM-KPXQ77D`
+
+Login: https://www.google.com/analytics/tag-manager/
+
+Admin: Torrey Tsui, Andrew Hill
+
+*Important:* GTM account is accessed through google account. Ask the admins to grant access.
