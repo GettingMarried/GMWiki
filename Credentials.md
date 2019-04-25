@@ -66,6 +66,6 @@ Environment: Local / Dev / QA
 
 Login: https://www.google.com/analytics/tag-manager/
 
-Admin: Torrey Tsui, Andrew Hill
+Admin: Andrew Hill
 
 *Important:* GTM account is accessed through google account. Ask the admins to grant access.
