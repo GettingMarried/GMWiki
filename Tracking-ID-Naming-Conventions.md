@@ -1,9 +1,14 @@
-* Our current process (and why we're doing it)
-    - Passing `trackId` prop to buttons (or adding `data-tracking-id`)
-    - Only buttons currently have this - should apply to anything clickable
+In this project we have been asked to implement new tracking codes to ensure that anything clickable or trackable is easy to pick up and identify in tracking software, such as Google Tag Manager. 
 
-* What we can do to improve it
-    - Currently, tracking-id seems to be the best thing to do for now
+It has been agreed by the team that all links and buttons should include a data-attribute to ensure that we can correctly log everything, for the following reasons: 
+* We might need element `id`s for different reasons, e.g. targeting elements with JavaScript
+* If we target element classes, they may be used frequently throughout the site, therefore making the click event non-uniquely identifiable 
+
+Our solutionto this was to add the `data-tracking-id` attribute to our interactive elements, without making the identifiers too personal. Following that, we needed to come up with a suitable naming convention to ensure that we knew: 
+* What **page** of the site the user was on
+* What **action** the user was trying to do
+* What **section** the user was on (e.g. Website Editor 'Edit Content', Inbox 'Open Message')
+* What **identifies** the particular element (e.g. Contact Us, Photo Gallery, a message index number)
 
 * Our current naming convention
     - `web-editor-theme-theme`
