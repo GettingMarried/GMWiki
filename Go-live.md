@@ -10,6 +10,8 @@ This page documents necessary steps required in order to go live, including prod
 
 ### Webhooks
 
+Set up Stripe production account with the webhooks
+
 URL: https://gettingmarried.co.uk/api/stripe/webhooks/
 
 Event types:
