@@ -6,6 +6,18 @@ This page documents necessary steps required in order to go live, including prod
 
 [GETMARRIED-136](https://ampersand.atlassian.net/browse/GETMARRIED-136)
 
+## Set up Stripe integration
+
+### Webhooks
+
+URL: https://gettingmarried.co.uk/api/stripe/webhooks/
+
+Event types:
+- invoice.created
+- invoice.payment_succeeded
+
+Note: incorrect webhook setup will result in subscription failed to renew or cancel after payment success or failure (See: GETMARRIED-328).
+
 Package is made default by UserAdmin and the system do not initialise this data. Before we go live, during UAT / Soft Launch phase, we are expected to make sure a default package is in place.
 
 # Environment (Involve: DevOps / SystemAdmin)
