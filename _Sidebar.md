@@ -8,4 +8,4 @@
 * [RSVP](https://github.com/AmpersandHQ/gettingmarried/wiki/RSVP-data-structure) **deprecated**
 * [User Migration](https://github.com/AmpersandHQ/gettingmarried/wiki/User-migration-data-structure)
 * [Website Editor](https://github.com/AmpersandHQ/gettingmarried/wiki/Website-Editor-Data-Structure) **deprecated**
-* [Website Settings](https://github.com/AmpersandHQ/gettingmarried/wiki/Website-Settings-data-structure)
+* [Website Settings](https://github.com/AmpersandHQ/gettingmarried/wiki/Website-Settings-data-structure) **deprecated**
