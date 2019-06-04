@@ -18,6 +18,7 @@ Local / development
 - Username: `tt+gm+dev+user@amp.co`
 - Password: `gettingmarried123!`
 - Guest view: https://gettingmarried.ampdev.co/wedding/guest/000000ff-0000-1000-8000-000000000000
+- Subscribed Packages: `Free`
 
 There are also 3 spare accounts to facilitate development and QA. (Password is the same)
 
@@ -25,13 +26,19 @@ There are also 3 spare accounts to facilitate development and QA. (Password is t
 
     https://gettingmarried.ampdev.co/wedding/guest/00000100-0000-1000-8000-000000000000
 
+    - Subscribed Packages: `Free` and `Creative Suite`
+
 - `tt+gm+dev+user+3@amp.co`
 
     https://gettingmarried.ampdev.co/wedding/guest/00000101-0000-1000-8000-000000000000
 
+    - Subscribed Packages: `Free`
+
 - `tt+gm+dev+user+4@amp.co`
 
     https://gettingmarried.ampdev.co/wedding/guest/00000102-0000-1000-8000-000000000000
+
+    - Subscribed Packages: `Free`
 
 This user is pre-populated with data fixture to enable QA
 
