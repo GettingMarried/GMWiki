@@ -56,6 +56,18 @@ Local / development / qa
 - Username: `tt@amp.co`
 - Password: `*zT9$Hl^5VC^2C6c`
 
+## MailChimp
+
+Local / development / qa
+- https://login.mailchimp.com/
+- Username: `ampdeveloper`
+- Password: `#7wFxTpEdRFULDDYmdYq`
+- API Key: `c5d895c33efba6e9ccbe6e56c75592ed-us3`
+- List ID (aka: Audience ID): `da51dd4a04`
+
+Production
+- Please check with Torrey, Martha, or Andrew
+
 ## Booking.com API and Documentation
 
 Development
