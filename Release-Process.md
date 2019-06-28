@@ -63,6 +63,12 @@ Make sure travis is passing and don't merge the PR until all checks have passed 
 
 If travis failed for any reason, identify the issue by re-running the travis build in debug mode and run each command as described in the [documentation](https://docs.travis-ci.com/user/running-build-in-debug-mode/#things-to-do-once-you-are-inside-the-debug-vm) to get more information.
 
+### Tagging a release
+
+Once your release has been merged into the relevant branch, a release version and tag needs to be created with the [Draft a New Release](https://github.com/AmpersandHQ/gettingmarried/releases/new) feature. 
+
+Example of a release and the relevant data: [0.17.0](https://github.com/AmpersandHQ/gettingmarried/releases/tag/0.17.0)
+
 ### Generate a list of tickets of given version
 
 Generate a ticket list for PM's reference
