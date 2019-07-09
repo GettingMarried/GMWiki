@@ -40,6 +40,20 @@ There are also 3 spare accounts to facilitate development and QA. (Password is t
 
     - Subscribed Packages: `Free`
 
+- `tt+gm+dev+user+suspended@amp.co`
+
+    https://gettingmarried.ampdev.co/wedding/guest/00000103-0000-1000-8000-000000000000
+
+    - Subscribed Packages: `Free`, `Creative Suite`
+    - Note: User with a billiable subscription which is **suspended**
+
+- `tt+gm+dev+user+cancelled@amp.co`
+
+    https://gettingmarried.ampdev.co/wedding/guest/00000104-0000-1000-8000-000000000000
+
+    - Subscribed Packages: `Free`, `Creative Suite`
+    - Note: User with a billiable subscription which is **cancelled**
+
 This user is pre-populated with data fixture to enable QA
 
 ## Auth0
