@@ -10,7 +10,9 @@ This page documents necessary steps required in order to go live, including prod
 
 ### Webhooks
 
-Set up Stripe production account with the webhooks
+Set up Stripe production account with the webhooks and whitelist Stripe webhook IPs
+
+Stripe IPs: https://stripe.com/docs/ips#webhook-ip-addresses
 
 URL: https://gettingmarried.co.uk/api/stripe/webhooks/
 
