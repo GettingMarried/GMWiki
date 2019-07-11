@@ -14,7 +14,7 @@ Set up Stripe production account with the webhooks and whitelist Stripe webhook 
 
 Stripe IPs: https://stripe.com/docs/ips#webhook-ip-addresses
 
-URL: https://gettingmarried.co.uk/api/stripe/webhooks/
+URL: `https://gettingmarried.co.uk/api/stripe/webhooks` (without tailing slash)
 
 Event types:
 - invoice.created
