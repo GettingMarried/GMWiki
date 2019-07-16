@@ -24,6 +24,19 @@ Note: incorrect webhook setup will result in subscription failed to renew or can
 
 Package is made default by UserAdmin and the system do not initialise this data. Before we go live, during UAT / Soft Launch phase, we are expected to make sure a default package is in place.
 
+## Configure MailChimp
+
+Generate and get below MailChimp details and configure them in admin panel.
+
+- API Key
+- List ID (aka: Audience ID)
+
+With correct setup, couple should be able to opt-in and opt-out MailChimp marketing preference list within GM:
+
+```
+Dashbaord > Account Settings > Marketing Preference
+```
+
 # Environment (Involve: DevOps / SystemAdmin)
 
 ## Environment variables
