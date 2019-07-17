@@ -78,7 +78,7 @@ Prerequisite: `cx` is installed locally (https://app.cloud66.com/toolbelt).
 COUPLE_EMAIL="tt+gm+dev+user+3@amp.co" CLOUD66_ENV="gettingmarried" ./tests/scripts/suspend_user.sh
 
 # To cancel an account
-COUPLE_EMAIL="tt+gm+dev+user+3@amp.co" CLOUD66_ENV="gettingmarried" ./tests/scripts/suspend_user.sh
+COUPLE_EMAIL="tt+gm+dev+user+3@amp.co" CLOUD66_ENV="gettingmarried" ./tests/scripts/cancel_user.sh
 ```
 
 Note: `COUPLE_EMAIL` is the email of the account against
