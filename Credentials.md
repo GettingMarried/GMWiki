@@ -87,7 +87,7 @@ Note 2: `CLOUD66_ENV` is either `gettingmarried` or `gettingmarried-qa`
 
 Reference:
 
-- https://github.com/AmpersandHQ/gettingmarried/blob/development/tests/scripts/suspended_user.sh
+- https://github.com/AmpersandHQ/gettingmarried/blob/development/tests/scripts/suspend_user.sh
 - https://github.com/AmpersandHQ/gettingmarried/blob/development/tests/scripts/cancel_user.sh
 
 ## Auth0
