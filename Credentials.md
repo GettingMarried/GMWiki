@@ -73,7 +73,15 @@ To enforce suspended or cancelled state, please ask any developer to run below s
 
 ```bash
 # To suspend an account
+COUPLE_EMAIL="tt+gm+dev+user+3@amp.co" CLOUD66_ENV="gettingmarried" ./tests/scripts/suspend_user.sh
+
+# To cancel an account
+COUPLE_EMAIL="tt+gm+dev+user+3@amp.co" CLOUD66_ENV="gettingmarried" ./tests/scripts/suspend_user.sh
 ```
+
+Note: `COUPLE_EMAIL` is the email of the account against
+
+Note 2: `CLOUD66_ENV` is either `gettingmarried` or `gettingmarried-qa`
 
 - https://github.com/AmpersandHQ/gettingmarried/blob/development/tests/scripts/suspended_user.sh
 - https://github.com/AmpersandHQ/gettingmarried/blob/development/tests/scripts/cancel_user.sh
