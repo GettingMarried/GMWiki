@@ -56,6 +56,28 @@ There are also 3 spare accounts to facilitate development and QA. (Password is t
 
 This user is pre-populated with data fixture to enable QA
 
+### Force a subscription into suspended or cancelled state
+
+To facilitate QA and also cover complicated scenario, e.g., verifying that the website editor's blocks and data stay still after resuming payment with a suspended account, scripts are created to force specific account in QA / Development environment into suspended or cancelled state.
+
+Example scenario:
+
+1. Log in to any user account (new or data fixture one, e.g., `tt+gm+dev+user+3@amp.co`)
+1. Subscribe to billable package (e.g., `Creative Suite`)
+1. Configure website editor to use blocks and themes from the billable package
+1. **Force the user account into suspended state (with developer help)*
+1. Update credit card and retry payment (the account reactivated automatically)
+1. Verify the blocks and theme data remain the same
+
+To enforce suspended or cancelled state, please ask any developer to run below script.
+
+```bash
+# To suspend an account
+```
+
+- https://github.com/AmpersandHQ/gettingmarried/blob/development/tests/scripts/suspended_user.sh
+- https://github.com/AmpersandHQ/gettingmarried/blob/development/tests/scripts/cancel_user.sh
+
 ## Auth0
 
 Local / development / qa
