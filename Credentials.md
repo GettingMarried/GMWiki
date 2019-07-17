@@ -60,16 +60,18 @@ This user is pre-populated with data fixture to enable QA
 
 To facilitate QA and also cover complicated scenario, e.g., verifying that the website editor's blocks and data stay still after resuming payment with a suspended account, scripts are created to force specific account in QA / Development environment into suspended or cancelled state.
 
-Example scenario:
+#### Example scenario
 
 1. Log in to any user account (new or data fixture one, e.g., `tt+gm+dev+user+3@amp.co`)
 1. Subscribe to billable package (e.g., `Creative Suite`)
 1. Configure website editor to use blocks and themes from the billable package
-1. **Force the user account into suspended state (with developer help)*
+1. **Force the user account into suspended state (with developer help)**
 1. Update credit card and retry payment (the account reactivated automatically)
 1. Verify the blocks and theme data remain the same
 
-To enforce suspended or cancelled state, please ask any developer to run below script.
+#### To enforce suspended or cancelled state, please ask any developer to run below script
+
+Prerequisite: `cx` is installed locally (https://app.cloud66.com/toolbelt).
 
 ```bash
 # To suspend an account
@@ -82,6 +84,8 @@ COUPLE_EMAIL="tt+gm+dev+user+3@amp.co" CLOUD66_ENV="gettingmarried" ./tests/scri
 Note: `COUPLE_EMAIL` is the email of the account against
 
 Note 2: `CLOUD66_ENV` is either `gettingmarried` or `gettingmarried-qa`
+
+Reference:
 
 - https://github.com/AmpersandHQ/gettingmarried/blob/development/tests/scripts/suspended_user.sh
 - https://github.com/AmpersandHQ/gettingmarried/blob/development/tests/scripts/cancel_user.sh
