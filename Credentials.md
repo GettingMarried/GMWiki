@@ -71,7 +71,10 @@ To facilitate QA and also cover complicated scenario, e.g., verifying that the w
 
 #### To enforce suspended or cancelled state, please ask any developer to run below script
 
-Prerequisite: `cx` is installed locally (https://app.cloud66.com/toolbelt).
+Prerequisite:
+
+- `cx` is installed locally (https://app.cloud66.com/toolbelt).
+- The account (e.g., `tt+gm+dev+user+3@amp.co`) has subscribed billable package
 
 ```bash
 # To suspend an account
