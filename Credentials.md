@@ -19,6 +19,7 @@ Local / development
 - Password: `gettingmarried123!`
 - Guest view: https://gettingmarried.ampdev.co/wedding/guest/000000ff-0000-1000-8000-000000000000
 - Subscribed Packages: `Free`
+- Auth0 ID: `auth0|5c7d3fd90c26462c04c496ce`
 
 There are also 3 spare accounts to facilitate development and QA. (Password is the same)
 
@@ -27,24 +28,28 @@ There are also 3 spare accounts to facilitate development and QA. (Password is t
     https://gettingmarried.ampdev.co/wedding/guest/00000100-0000-1000-8000-000000000000
 
     - Subscribed Packages: `Free` and `Creative Suite`
+    - Auth0 ID: `auth0|5c9b4ae1f2c8a911a283f4f9`
 
 - `tt+gm+dev+user+3@amp.co`
 
     https://gettingmarried.ampdev.co/wedding/guest/00000101-0000-1000-8000-000000000000
 
     - Subscribed Packages: `Free`
+    - Auth0 ID: `auth0|5c9b4b183e678c11ada56e52`
 
 - `tt+gm+dev+user+4@amp.co`
 
     https://gettingmarried.ampdev.co/wedding/guest/00000102-0000-1000-8000-000000000000
 
     - Subscribed Packages: `Free`
+    - Auth0 ID: `auth0|5c9b4b63c0df337b458620a9`
 
 - `tt+gm+dev+user+suspended@amp.co`
 
     https://gettingmarried.ampdev.co/wedding/guest/00000103-0000-1000-8000-000000000000
 
     - Subscribed Packages: `Free`, `Creative Suite`
+    - Auth0 ID: `auth0|5d24a9c749d3b20ed08bb34a`
     - Note: User with a billiable subscription which is **suspended**
 
 - `tt+gm+dev+user+cancelled@amp.co`
@@ -52,6 +57,7 @@ There are also 3 spare accounts to facilitate development and QA. (Password is t
     https://gettingmarried.ampdev.co/wedding/guest/00000104-0000-1000-8000-000000000000
 
     - Subscribed Packages: `Free`, `Creative Suite`
+    - Auth0 ID: `auth0|5d24a9dfd5a5980de9f7a6d5`
     - Note: User with a billiable subscription which is **cancelled**
 
 This user is pre-populated with data fixture to enable QA
