@@ -16,6 +16,7 @@ You must have a valid user setup and active into their backend. To create an adm
 Local
 - https://emilyandarchie.gettingmarried-local.ampdev.co
 - https://aliceandbob.gettingmarried-local.ampdev.co
+- https://invalid.gettingmarried-local.ampdev.co (any domain that contains the keyword `invalid` will fail)
 
 Dev
 - https://emilyandarchie.gettingmarried.ampdev.co
@@ -25,9 +26,11 @@ QA
 - https://emilyandarchie.gettingmarried-qa.ampdev.co
 - https://aliceandbob.gettingmarried-qa.ampdev.co
 
-The two DNS records (`emilyandarchie` and `aiceandbob`) are set up.
-They are not related to any fixture accounts. Please go through
-the normal user journey and configure them with wedding account.
+For Dev and QA, two DNS records (`emilyandarchie` and `aiceandbob`)
+are created.
+
+For local, use `invalid` keyword for testing, as we don't have DNS
+server setup locally.
 
 ## GM data fixture user
 
