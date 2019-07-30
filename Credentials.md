@@ -11,6 +11,24 @@ Authentication uses Auth0 service for both Admin view and couple view.
  
 You must have a valid user setup and active into their backend. To create an admin account, log in to Auth0 portal  with corresponding Auth0 credentials and create a new user at [Users](https://manage.auth0.com/#/users). 
 
+## GM data fixture domains
+
+Local
+- https://emilyandarchie.gettingmarried-local.ampdev.co
+- https://aliceandbob.gettingmarried-local.ampdev.co
+
+Dev
+- https://emilyandarchie.gettingmarried.ampdev.co
+- https://aliceandbob.gettingmarried.ampdev.co
+
+QA
+- https://emilyandarchie.gettingmarried-qa.ampdev.co
+- https://aliceandbob.gettingmarried-qa.ampdev.co
+
+The two DNS records (`emilyandarchie` and `aiceandbob`) are set up.
+They are not related to any fixture accounts. Please go through
+the normal user journey and configure them with wedding account.
+
 ## GM data fixture user
 
 Local / development
