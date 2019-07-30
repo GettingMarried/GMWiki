@@ -26,7 +26,7 @@ QA
 - https://emilyandarchie.gettingmarried-qa.ampdev.co
 - https://aliceandbob.gettingmarried-qa.ampdev.co
 
-For Dev and QA, two DNS records (`emilyandarchie` and `aiceandbob`)
+For Dev and QA, two DNS records (`emilyandarchie` and `aliceandbob`)
 are created.
 
 For local, use `invalid` keyword for testing, as we don't have DNS
