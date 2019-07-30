@@ -16,7 +16,7 @@ You must have a valid user setup and active into their backend. To create an adm
 Local
 - https://emilyandarchie.gettingmarried-local.ampdev.co
 - https://aliceandbob.gettingmarried-local.ampdev.co
-- https://invalid.gettingmarried-local.ampdev.co (any domain that contains the keyword `invalid` will fail)
+- https://invalid.gettingmarried-local.ampdev.co (any domain that contains the keyword `invalid` will fail the CNAME check in API call)
 
 Dev
 - https://emilyandarchie.gettingmarried.ampdev.co
