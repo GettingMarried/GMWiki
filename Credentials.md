@@ -107,6 +107,15 @@ Prerequisite:
 # To suspend an account
 COUPLE_EMAIL="tt+gm+dev+user+3@amp.co" CLOUD66_ENV="gettingmarried" ./tests/scripts/suspend_user.sh
 
+Cloud66 pods: gettingmarried
+Couple email: tt+gm+dev+user+2@amp.co
+Fetching identifiers...
+Stripe customer id: cus_FXlPmyBfxEbGKX
+Stripe subscription id: sub_FXlPsAAp1L1mvC
+Updating Stripe
+Updating db
+Finish
+
 # To cancel an account
 COUPLE_EMAIL="tt+gm+dev+user+3@amp.co" CLOUD66_ENV="gettingmarried" ./tests/scripts/cancel_user.sh
 
@@ -115,16 +124,23 @@ COUPLE_EMAIL="tt+gm+dev+user+3@amp.co" CLOUD66_ENV="gettingmarried" ./tests/scri
 
 # To invalidate the saved card of an account
 COUPLE_EMAIL="tt+gm+dev+user+3@amp.co" CLOUD66_ENV="gettingmarried" ./tests/scripts/invalidate_user_card.sh
+
+# To get the stripe IDs of an account
+COUPLE_EMAIL="tt+gm+dev+user+3@amp.co" CLOUD66_ENV="gettingmarried" ./tests/scripts/collect_user_data.sh
 ```
 
 Note: `COUPLE_EMAIL` is the email of the account against
 
 Note 2: `CLOUD66_ENV` is either `gettingmarried` or `gettingmarried-qa`
 
+Note 3: For developer local testing, use `LOCAL_ENV="true"` instead of `CLOUD66_ENV`.
+
 Reference:
 
 - https://github.com/AmpersandHQ/gettingmarried/blob/development/tests/scripts/suspend_user.sh
 - https://github.com/AmpersandHQ/gettingmarried/blob/development/tests/scripts/cancel_user.sh
+- https://github.com/AmpersandHQ/gettingmarried/blob/development/tests/scripts/end_user_billing.sh
+- https://github.com/AmpersandHQ/gettingmarried/blob/development/tests/scripts/invalidate_user_card.sh
 
 ## Auth0
 
