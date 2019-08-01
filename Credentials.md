@@ -109,6 +109,12 @@ COUPLE_EMAIL="tt+gm+dev+user+3@amp.co" CLOUD66_ENV="gettingmarried" ./tests/scri
 
 # To cancel an account
 COUPLE_EMAIL="tt+gm+dev+user+3@amp.co" CLOUD66_ENV="gettingmarried" ./tests/scripts/cancel_user.sh
+
+# To end the billing period of an account
+COUPLE_EMAIL="tt+gm+dev+user+3@amp.co" CLOUD66_ENV="gettingmarried" ./tests/scripts/end_user_billing.sh
+
+# To invalidate the saved card of an account
+COUPLE_EMAIL="tt+gm+dev+user+3@amp.co" CLOUD66_ENV="gettingmarried" ./tests/scripts/invalidate_user_card.sh
 ```
 
 Note: `COUPLE_EMAIL` is the email of the account against
